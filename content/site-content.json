@@ -42,16 +42,10 @@
           "seed": 117540,
           "gallery": [
             {
-              "id": "detail-1",
-              "image": "/api/media/683563ef-bcad-4308-8fd8-91df2f1952a5",
-              "caption": "01 / Visual exploration",
-              "layout": "wide"
-            },
-            {
-              "id": "905f75c9-541e-42a4-ba0f-75b2bb0d1b5a",
-              "image": "/api/media/77ea7b54-8637-4951-ba37-f52589fe609c",
+              "id": "42052e79-c3f8-42cf-90c0-c3b34db45858",
+              "image": "/api/media/8301a1f4-33cc-435c-b0d3-4ca9fd1c6107",
               "mediaType": "image",
-              "caption": "Home Page",
+              "caption": "Landing Page",
               "layout": "wide"
             }
           ]
@@ -75,6 +69,6 @@
       }
     ]
   },
-  "version": 5,
-  "updatedAt": "2026-09-11T13:19:52.823Z"
+  "version": 6,
+  "updatedAt": "2026-09-11T13:37:45.691Z"
 }
