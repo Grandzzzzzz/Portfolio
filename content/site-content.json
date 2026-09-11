@@ -46,6 +46,13 @@
               "image": "/api/media/683563ef-bcad-4308-8fd8-91df2f1952a5",
               "caption": "01 / Visual exploration",
               "layout": "wide"
+            },
+            {
+              "id": "905f75c9-541e-42a4-ba0f-75b2bb0d1b5a",
+              "image": "/api/media/77ea7b54-8637-4951-ba37-f52589fe609c",
+              "mediaType": "image",
+              "caption": "Home Page",
+              "layout": "wide"
             }
           ]
         }
@@ -68,6 +75,6 @@
       }
     ]
   },
-  "version": 2,
-  "updatedAt": "2026-09-11T12:29:09.676Z"
+  "version": 3,
+  "updatedAt": "2026-09-11T12:35:02.873Z"
 }
