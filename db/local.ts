@@ -17,7 +17,7 @@ const contentPath = path.join(root, 'content', 'site-content.json');
 const mediaDirectory = path.join(root, 'public', 'uploads');
 
 function mediaPath(key: string) {
-  if (!/^[a-f0-9-]{36}(?:\/\d+)?$/.test(key)) throw Error('Invalid media key');
+  if (!/^(?:__upload\/)?[a-f0-9-]{36}(?:\/\d+)?$/.test(key)) throw Error('Invalid media key');
   return path.join(mediaDirectory, `${key.replaceAll('/', '-')}.bin`);
 }
 

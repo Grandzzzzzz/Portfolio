@@ -1,0 +1,53 @@
+{
+  "content": {
+    "name": "Jiahao Zhang",
+    "role": "UI/UX Designer",
+    "location": "Shanghai, China",
+    "tagline": "Ideas into identities.\nThoughts into experiences.",
+    "email": "Grandcanmakeit@outlook.com",
+    "available": true,
+    "aboutTitle": "I make things\nmean something.",
+    "aboutBody": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. I work at the intersection of visual identities and digital experiences, turning a little curiosity into something unexpected.",
+    "aboutExtra": "Based somewhere between a good idea and its next iteration. Open to thoughtful collaborations, new perspectives, and ambitious little things.",
+    "services": [
+      "Art direction",
+      "Brand identity",
+      "Digital experiences",
+      "Editorial design"
+    ],
+    "hero": {
+      "enabled": true,
+      "speed": 1,
+      "color": 0.53,
+      "texture": 0.033
+    },
+    "projects": [
+      {
+        "id": "project-1",
+        "name": "Forma Studio",
+        "category": "Art direction / Identity",
+        "year": "2026",
+        "image": "/images/work-01.png",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. A study in form, feeling, and the spaces in between."
+      },
+      {
+        "id": "project-2",
+        "name": "Between Spaces",
+        "category": "Editorial / Digital",
+        "year": "2025",
+        "image": "/images/work-02.png",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. A study in form, feeling, and the spaces in between."
+      },
+      {
+        "id": "project-3",
+        "name": "Objects of Tomorrow",
+        "category": "Branding / Strategy",
+        "year": "2025",
+        "image": "/images/work-03.png",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. A study in form, feeling, and the spaces in between."
+      }
+    ]
+  },
+  "version": 1,
+  "updatedAt": "2026-09-11T12:15:07.806Z"
+}
