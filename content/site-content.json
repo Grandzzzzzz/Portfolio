@@ -34,9 +34,9 @@
           "client": "NSW Museum",
           "role": "UI/UX Design, IA Design ",
           "duration": "20 weeks",
-          "challenge": "A familiar idea, seen from a different angle. The brief was to create a distinct visual language that feels clear, intentional, and a little unexpected.",
-          "approach": "We began with research, sketches, and a simple question: what can we remove? Through typography, material studies, and digital experiments, the direction became a cohesive system.",
-          "outcome": "A flexible identity with room to grow. From the smallest detail to the complete experience, every element shares the same visual rhythm.",
+          "challenge": "Project Context\nIndustry Context: Social robotics & telepresence technology\nInstitutional Context: Public museum environment\nCompany Context: R&D exploration for a new telepresence robot product\nUse Scenario: Remote visitors exploring physical museum spaces online\n\nProblem Statement\nIn collaboration with the Australian Museum and the R&D department of Sage Labs, this project addressed the challenge of making telepresence-based museum visits understandable and usable for remote users. While telepresence robots enable navigation through physical exhibition spaces, users often struggle with orientation, system feedback, and deciding how to explore meaningfully without physical presence.\n\nMission Statement\nDesign a human-centered remote interaction experience that enables meaningful presence, autonomy, and engagement in physical spaces from a distance.",
+          "approach": "Design Process\nUnderstand: User Research/Competitive Analysis/User Interview\nDefine: User Personas/User Journey\nIdeate: User Flow/IA\nDesign: Wireframe/Hi-Fi Designs/Prototype\nTest: Feedbacks/Conclusion/Future Concept\n\nDesign Goal\n\nReduced Cognitive Load: Minimise mental effort by simplifying navigation, controls, and on-screen information.\n\nConfident Remote Exploration: Enable remote users to confidently explore a physical museum space through intuitive telepresence robot controls.\n\nAction and Progress Guidance: Help users clearly understand what they can do next and how to proceed throughout the visiting experience.\n\nSpatial Orientation and Awareness: Support users’ understanding of their current location, direction, and progress within the physical space.\n\n\n\n\n\n\n",
+          "outcome": "For more information, please click the Figma link below:\n\nhttps://www.figma.com/proto/BtFFR9UfSCAWmmtaTIgeU9/Untitled?page-id=0%3A1&node-id=2003-110&p=f&viewport=489%2C-118%2C0.03&t=FH0DkbVzh43yuMUf-1&scaling=min-zoom&content-scaling=fixed",
           "effect": "auto",
           "palette": "auto",
           "seed": 117540,
@@ -75,6 +75,6 @@
       }
     ]
   },
-  "version": 3,
-  "updatedAt": "2026-09-11T12:35:02.873Z"
+  "version": 4,
+  "updatedAt": "2026-09-11T13:15:49.908Z"
 }
