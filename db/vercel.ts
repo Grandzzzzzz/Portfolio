@@ -1,7 +1,8 @@
 import 'server-only';
+import contentSnapshot from '../content/site-content.json';
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
-import { defaultContent, type Content } from '@/lib/content';
+import { type Content } from '@/lib/content';
 
 type Snapshot = { content: Content; version: number; updatedAt: string | null };
 type MediaObject = {
@@ -13,17 +14,8 @@ type MediaObject = {
 };
 
 const media = new Map<string, { bytes: Uint8Array; contentType: string }>();
-const snapshot: Snapshot = { content: defaultContent, version: 0, updatedAt: null };
-const contentPath = path.join(process.cwd(), 'content', 'site-content.json');
+const snapshot: Snapshot = contentSnapshot as Snapshot;
 const uploadsPath = path.join(process.cwd(), 'public', 'uploads');
-
-async function readFileContent(): Promise<Snapshot> {
-  try {
-    return JSON.parse(await readFile(contentPath, 'utf8')) as Snapshot;
-  } catch {
-    return snapshot;
-  }
-}
 
 export function bindings() {
   return {
@@ -65,7 +57,7 @@ export function bindings() {
 }
 
 export async function readContent(): Promise<Snapshot> {
-  return readFileContent();
+  return snapshot;
 }
 
 export async function writeContent(content: Content, version: number): Promise<Snapshot | null> {
