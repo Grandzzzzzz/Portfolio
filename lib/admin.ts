@@ -4,15 +4,17 @@ import { bindings } from '@/db';
 import { cloudflareAdmin } from './cloudflare-auth';
 import {netlifyAdmin} from './netlify-auth';
 export function isNetlifyHost(){return (bindings().PORTFOLIO_HOST as string)==='netlify'}
+export function isLocalHost(){return (bindings().PORTFOLIO_HOST as string)==='local'}
 export function isCloudflareHost() {
   return bindings().PORTFOLIO_HOST === 'cloudflare';
 }
 export async function getAdminSession() {
-  return isNetlifyHost()?netlifyAdmin():isCloudflareHost() ? cloudflareAdmin() : getChatGPTUser();
+  return isLocalHost() ? { userId: 'local', email: 'local@localhost', displayName: 'Local admin', fullName: 'Local admin' } : isNetlifyHost()?netlifyAdmin():isCloudflareHost() ? cloudflareAdmin() : getChatGPTUser();
 }
 export async function isAdmin() {
   const user = await getAdminSession();
   if (!user) return false;
+  if (isLocalHost()) return true;
   if (isCloudflareHost()||isNetlifyHost()) return true;
   if (process.env.NODE_ENV === 'development' && user.userId === 'local_seedy')
     return true;

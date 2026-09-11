@@ -45,6 +45,10 @@ export default defineConfig(async () => {
   if(vercel){
     return {resolve:{alias:[{find:/^@\/db$/,replacement:fileURLToPath(new URL('./db/vercel.ts',import.meta.url))},...Object.entries({'tailwindcss':'./node_modules/tailwindcss/index.css','tw-animate-css':'./node_modules/tw-animate-css/dist/tw-animate.css','shadcn/tailwind.css':'./node_modules/shadcn/dist/tailwind.css'}).map(([find,path])=>({find,replacement:fileURLToPath(new URL(path,import.meta.url))}))]},css:{postcss:{plugins:[tailwindcss()]}},plugins:[{name:'portfolio-vercel-storage',enforce:'pre' as const,load(id:string){if(id===fileURLToPath(new URL('./db/index.ts',import.meta.url)))return "export * from './vercel';";}},vinext(),(await import('nitro/vite')).nitro()]};
   }
+  const local = process.env.PORTFOLIO_DEPLOY_TARGET === 'local';
+  if(local){
+    return {resolve:{alias:[{find:/^@\/db$/,replacement:fileURLToPath(new URL('./db/local.ts',import.meta.url))},...Object.entries({'tailwindcss':'./node_modules/tailwindcss/index.css','tw-animate-css':'./node_modules/tw-animate-css/dist/tw-animate.css','shadcn/tailwind.css':'./node_modules/shadcn/dist/tailwind.css'}).map(([find,path])=>({find,replacement:fileURLToPath(new URL(path,import.meta.url))}))]},css:{postcss:{plugins:[tailwindcss()]}},plugins:[{name:'portfolio-local-storage',enforce:'pre' as const,load(id:string){if(id===fileURLToPath(new URL('./db/index.ts',import.meta.url)))return "export * from './local';";}},vinext()]};
+  }
   const standalone = process.env.PORTFOLIO_DEPLOY_TARGET === 'cloudflare';
   // Keep Wrangler and Miniflare state project-local. These are non-secret tool
   // settings; application environment belongs in ignored `.env*` files.
