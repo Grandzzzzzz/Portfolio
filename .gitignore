@@ -34,5 +34,14 @@ yarn-error.log*
 next-env.d.ts
 /dist/
 /.wrangler/
+/.backups/
+.dev.vars*
 /outputs/
 /work/
+
+# TypeScript build cache
+*.tsbuildinfo
+!.env.example
+
+/.netlify/
+/.output/

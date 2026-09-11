@@ -1,0 +1,18 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "jiahao-portfolio",
+  "account_id": "9b3bee06bc4841ded238ce0e3751a1ae",
+  "main": "vinext/server/fetch-handler",
+  "compatibility_date": "2026-05-15",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": true,
+  "preview_urls": false,
+  "vars": {"PORTFOLIO_HOST": "cloudflare"},
+  "d1_databases": [{
+    "binding": "DB",
+    "database_name": "jiahao-portfolio",
+    "database_id": "aca53795-921b-490f-b7f1-64f1caab6991",
+    "migrations_dir": "drizzle"
+  }],
+  "r2_buckets": [{"binding": "MEDIA", "bucket_name": "jiahao-portfolio-media"}]
+}
