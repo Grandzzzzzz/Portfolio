@@ -24,11 +24,31 @@
     "projects": [
       {
         "id": "project-1",
-        "name": "Forma Studio",
-        "category": "Art direction / Identity",
-        "year": "2026",
-        "image": "/images/work-01.png",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. A study in form, feeling, and the spaces in between."
+        "name": "Remote Museum Visiting Platform with Telepresence Robot",
+        "category": "Web Design",
+        "year": "2022",
+        "image": "/api/media/683563ef-bcad-4308-8fd8-91df2f1952a5",
+        "mediaType": "image",
+        "description": "This was a real-world collaborative project developed with the Australian Museum and the R&D department of Sage Labs, an internationally operating company specialising in social robotics. The project explored how a new telepresence robot could support remote museum visits, allowing users to navigate a physical exhibition space online while maintaining clarity, orientation, and a sense of intentional exploration.",
+        "details": {
+          "client": "NSW Museum",
+          "role": "UI/UX Design, IA Design ",
+          "duration": "20 weeks",
+          "challenge": "A familiar idea, seen from a different angle. The brief was to create a distinct visual language that feels clear, intentional, and a little unexpected.",
+          "approach": "We began with research, sketches, and a simple question: what can we remove? Through typography, material studies, and digital experiments, the direction became a cohesive system.",
+          "outcome": "A flexible identity with room to grow. From the smallest detail to the complete experience, every element shares the same visual rhythm.",
+          "effect": "auto",
+          "palette": "auto",
+          "seed": 117540,
+          "gallery": [
+            {
+              "id": "detail-1",
+              "image": "/api/media/683563ef-bcad-4308-8fd8-91df2f1952a5",
+              "caption": "01 / Visual exploration",
+              "layout": "wide"
+            }
+          ]
+        }
       },
       {
         "id": "project-2",
@@ -48,6 +68,6 @@
       }
     ]
   },
-  "version": 1,
-  "updatedAt": "2026-09-11T12:15:07.806Z"
+  "version": 2,
+  "updatedAt": "2026-09-11T12:29:09.676Z"
 }
