@@ -8,18 +8,124 @@
     "available": true,
     "aboutTitle": "I make things\nmean something.",
     "aboutBody": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. I work at the intersection of visual identities and digital experiences, turning a little curiosity into something unexpected.",
-    "aboutExtra": "Based somewhere between a good idea and its next iteration. Open to thoughtful collaborations, new perspectives, and ambitious little things.",
+    "aboutExtra": "我的技能:\n\n交互设计: 用户界面设计(网站,应用等), Human-centered design (HCD)\n用户研究与分析：用户数据分析、用户访谈、问卷调查、可用性测试、A/B 测试、用户画像构建、需求洞察、定性/定量研究​\n数据处理与可视化：数据分析、数据可视化\n\n",
     "services": [
-      "Art direction",
-      "Brand identity",
-      "Digital experiences",
-      "Editorial design"
+      "UI/UX Design",
+      "Product Design",
+      "AIGC",
+      "Sound Design(Remix/Mastering)"
     ],
     "hero": {
       "enabled": true,
       "speed": 1,
       "color": 0.53,
       "texture": 0.033
+    },
+    "resume": {
+      "enabled": true,
+      "title": "The story\nso far.",
+      "intro": "农村孩子能吃苦, 左手力气大, 右手大力气.",
+      "logoTitle": "LOGO STUDIES / 示例标识",
+      "logoSpeed": 35,
+      "entries": [
+        {
+          "id": "resume-1",
+          "kind": "experience",
+          "period": "2025.03-2026.05",
+          "title": "Outlier (Intern/Project Based)",
+          "organization": "AI Trainer (Interaction Design / Multilingual Content Generation) / AI 训练师(交互设计/多语言内容生成)",
+          "description": "The AI-generated UI tool suffered from discrepancies in recognizing interface interaction logic, resulting in a content discard rate of 11% (typical for the industry's early-stage development); algorithm optimization required data-driven insights derived from user interaction analysis. During the internship, I assisted in annotating and validating user interaction data and evaluating AI-generated content, providing precise feedback for algorithm optimization based on data analysis.Focusing on key dimensions of user interaction, I annotated and validated over 200 English interface interaction training samples (covering layout logic and operation paths) to ensure alignment with real-world user habits. Supporting three collaborative projects (Ui zard, Bubble, and MGX), I organized, classified, and cleaned over 3,000 raw user interaction data points. I participated in the AI content evaluation process—using UX scoring methods to gather feedback—and helped compile five evaluation reports; I identified key areas for interaction logic improvement and collaborated with the team to fine-tune algorithm parameters.I helped increase the tool's interface interaction pattern recognition accuracy by 5% (rising from 78% to 83%). Interaction logic optimizations based on data analysis improved user operational fluidity by 4% (reducing average task completion time from 8.5 seconds to 8.1 seconds). Additionally, the AI content discard rate dropped by one percentage point, providing precise user interaction data to support product iteration for client partners.\n\nAI生成UI工具存在界面交互逻辑识别偏差，内容弃用率11%（行业入门阶段平均水平），需通过用户交互数据研究与分析，支撑算法迭代优化。实习期间协助开展用户交互行为数据标注与校验，参与AI 生成内容效果评估，通过数据研究为算法优化提供精准反馈。聚焦用户交互核心维度，完成200+条英文界面交互训练数据的标注与校验（覆盖布局逻辑、操作路径两大场景），确保数据贴合真实用户交互习惯；配合Ui zard/Bubble/MGX 3个合作项目，整理3000+条用户交互基础数据，进行数据分类与清洗；参与AI 生成内容评估流程，采用用户体验评分法收集反馈，协助整理5+份评估报告，提炼交互逻辑优化要点，配合团队完成1次算法参数微调。助力工具界面交互模式识别准确率提升5%（从78%升至83%），基于数据研究优化的交互逻辑使用户操作流畅度提升4%（平均操作时长从8.5秒降至8.1秒）；AI 生成内容弃用率降低1个百分点，为合作客户产品迭代提供精准的用户交互数据支撑。"
+        },
+        {
+          "id": "resume-2",
+          "kind": "experience",
+          "period": "2024.02-2025.06",
+          "title": "Frazer-Nash Consultancy (Sydney)",
+          "organization": "User Experience and Strategic Analysis Intern/ 用户体验与战略分析实习",
+          "description": "Australia's nuclear energy projects faced challenges regarding public perception gaps and a lack of stakeholder trust. To address this, I led user research across diverse groups—reaching over 5,000 potential audience members—to identify core obstacles and establish an effective communication bridge between policymakers and the public. By employing a mixed-methods approach (combining qualitative and quantitative research), I uncovered key pain points and needs regarding public perception, delivering actionable insights that drove the project forward. A mixed-methods research plan was developed using SurveyMonkey to design both structured interview guides (focused on uncovering in-depth needs) and quantitative questionnaires (focused on surveying the current state of awareness). The study precisely covered diverse groups across three states and eight communities—including local residents (32), Indigenous representatives (15), and Australian Greens officials (5)—balancing sample representativeness with group diversity. Seven in-depth interviews were conducted using a \"laddering\" questioning technique to elicit underlying demands, while the tools facilitated the efficient collection of 62 valid questionnaires (an 85% response rate) and enabled data categorization, feature extraction, and cross-analysis. Finally, a user perception map was constructed based on the findings to visualize perceptual differences and key barriers across groups, providing data-driven insights to optimize information communication. Precisely identified three core barriers to adoption—information gaps, a lack of trust, and divergent interests—and produced an 80+ page professional research report (featuring data insights, user personas, and optimization recommendations). The findings were incorporated into the company’s strategic decision-making and supported the advancement of two provincial-level nuclear energy projects. The research empowered the optimization of the information communication framework, resulting in a 40% increase in the target audience's understanding of nuclear energy policies (with the cognitive test pass rate rising from 35% to 75%) and establishing a reusable research methodology for future user studies and policy implementation.\n\n澳大利亚核能项目落地遇公众认知偏差、利益相关者信任不足问题，需通过系统性用户研究厘清核心障碍，搭建政策与公众的有效沟通桥梁，覆盖5000+潜在受众, 在职期间主导多元群体用户研究，运用定性与定量结合的研究方法，挖掘用户认知痛点与需求，输出可落地的研究成果支撑项目推进。制定混合研究方案，运用SurveyMonkey设计 结构化访谈提纲（侧重深度需求挖掘）及定量问卷（侧重认知现状普查），精准覆盖3个州、8个社区的多元群体，含社区居民（32人）、原住民代表（15人）、澳大利亚绿党政要（5人），兼顾样本代表性与群体差异性；执行7场深度访谈，采用阶梯式提问法挖掘潜在诉求，依托两款工具高效依托两款工具高效回收有效问卷62份（回收率85%），并通过工具自带分析功能完成数据分类、特征提炼与交叉比对，精准，并通过工具自带分析功能完成数据分类、特征提炼与交叉比对；基于研究结果构建用户认知地图，可视化呈现不同群体的认知差异与核心障碍，为信息传达优化提供数据支撑。精准识别信息壁垒、信任缺失、利益诉求分歧3类核心采纳障碍，输出80页+专业研究报告（含数据洞察、用户画像、优化建议），被纳入公司战略决策，支撑2个省级核能项目推进；研究成果赋能信息传达框架优化，使目标受众对核能政策理解度提升40%（认知测试通过率从35%升至75%），为后续用户研究与政策落地提供可复用的研究方法论。"
+        },
+        {
+          "id": "resume-3",
+          "kind": "experience",
+          "period": "2024.09-2025.03",
+          "title": "ワールド・アーク株式会社,Tokyo (Sydney Branch/Intern)",
+          "organization": "Sydney Regional Deputy Manager/悉尼区域副经理/シドニー地域担当副マネージャー",
+          "description": "In the early stages of entering the Sydney market, a Japanese brand faced challenges such as insufficient localization, a lack of customer resources, and low market awareness, necessitating a breakthrough in growth through market research and tailored strategies. The initiative involved conducting market research and user needs analysis, formulating localized operational strategies, and establishing a customer management system to enhance market fit and customer retention. The project led a comprehensive market survey of Sydney, utilizing competitor benchmarking and channel visits to analyze over 15 similar brands and 30 sales channels, thereby gaining deep insights into the market landscape, user preferences, and channel characteristics. Based on these findings, four distinct localization strategies were developed—ranging from targeted online social media outreach to immersive offline exhibition experiences—to meet the needs of diverse user segments. A tiered customer management and feedback response system was implemented (achieving a 100% response rate within 24 hours), facilitating ongoing communication to uncover latent customer needs and refine service strategies. Additionally, logistics and supplier resources were coordinated to build an efficient fulfillment system, ensuring consistent service quality. The initiative successfully secured over 10 key clients and established a stable service network covering the Sydney metropolitan area and three surrounding regions. Customer repurchase rates rose by 14 percentage points (from 30% to 44%); the localization strategy effectively resolved market fit challenges, while the service system—optimized based on user needs—significantly boosted customer loyalty.\n\n日本品牌进军悉尼市场初期，受本地化适配不足、客户资源匮乏、市场认知薄弱等问题困扰，需通过市场研究与策略定制突破发展瓶颈。开展市场调研与用户需求分析，定制本地化运营策略，搭建客户管理体系，提升品牌市场适配度与客户粘性。主导悉尼市场全景调研，采用竞品对标法、渠道走访法，覆盖15+同类品牌、30+销售渠道，深度分析市场格局、用户偏好及渠道特性；基于调研结果制定4类差异化本地化策略，含线上社媒精准触达、线下展会场景化体验等，适配不同用户群体需求；建立客户分层管理与反馈响应体系（24小时内回复率100%），通过持续沟通挖掘客户潜在需求，优化服务策略；协调物流与供应商资源，搭建高效履约体系，保障服务体验稳定性。成功拓展10+核心客户，构建覆盖悉尼市区及周边3个区域的稳定服务网络；客户复购率提升14个百分点（从30%升至44%），本地化策略有效解决品牌市场适配难题，基于用户需求优化的服务体系显著提升客户忠诚。\n\n日本ブランドがシドニー市場へ参入する初期段階では、現地への適応不足、顧客基盤の欠如、市場認知度の低さといった課題に直面していました。これらを克服し、成長の壁を打破するために、市場調査と戦略の策定が不可欠でした。そこで、市場調査およびユーザーニーズ分析を実施し、現地に最適化した運営戦略の策定や顧客管理体制の構築を行うことで、ブランドの市場適合性と顧客エンゲージメントの向上を図りました。\nシドニー市場の全体像を把握するための調査を主導し、競合ベンチマークや販売チャネルへの実地訪問といった手法を用いて、15以上の同業ブランドと30以上の販売チャネルを対象に、市場構造、ユーザーの嗜好、チャネル特性を詳細に分析しました。調査結果に基づき、オンラインでのSNSを活用したターゲットへの直接的なアプローチや、オフライン展示会での体験型プロモーションなど、異なるユーザー層のニーズに対応した4種類の差別化されたローカライゼーション戦略を策定しました。また、顧客のセグメンテーション管理およびフィードバック対応体制（24時間以内の回答率100%）を構築し、継続的なコミュニケーションを通じて潜在的なニーズを掘り起こし、サービス戦略の最適化を図りました。さらに、物流やサプライヤーのリソースを調整して効率的なフルフィルメント体制を構築し、サービスの安定性を確保しました。その結果、10社以上の主要顧客を獲得し、シドニー市内および周辺3地域をカバーする安定したサービス網を構築することに成功しました。顧客のリピート率は14ポイント向上（30%から44%へ）し、ローカライゼーション戦略によってブランドの市場適合に関する課題が効果的に解決されました。また、ユーザーニーズに基づいて最適化されたサービス体制は、顧客ロイヤルティの著しい向上をもたらしました。"
+        },
+        {
+          "id": "36930457-a7bd-4610-b6de-c258010a519a",
+          "kind": "experience",
+          "period": "2024.02-2024.06",
+          "title": "ワールド・アーク株式会社,Tokyo (Sydney/Intern)",
+          "organization": "User Experience Optimization Specialist/用户体验优化专员/UX最適化スペシャリスト",
+          "description": "The company's product selection and pricing strategies lacked data-driven support; core products had a click-through rate (CTR) of only 12% and a market share of under 5%. To address this, I conducted research on user behavior to uncover needs and optimize strategies for the market. During my internship, I analyzed user purchasing behavior and competitor offerings, producing data-driven insight reports that provided a scientific basis for product selection and pricing decisions. I employed a combination of surveys and order data analysis to gather data on purchasing behaviors and preferences from over 200 individual and 30+ B2B customers (covering 10 core product categories). Using data analysis, I identified eight key product selling points and five major user pain points. I also researched the pricing structures, promotional strategies, and customer reviews of over 30 competing products, developed a price trend forecasting model (with 82% accuracy), and quantitatively analyzed the correlation between pricing and user acceptance. The resulting user behavior report drove the optimization of the product mix—phasing out three categories of slow-moving items and introducing five categories with high potential—which boosted the core product CTR by 16%. Furthermore, pricing strategy optimizations based on this research helped increase market share by 8%, while establishing a replicable methodology for user behavior research and strategy implementation.\n\n公司选品与定价策略缺乏数据支撑，核心产品点击率仅12%，市场占有率不足5%，需通过用户行为研究挖掘需求，优化策略适配市场。实习期间开展用户购买行为研究与市场竞品调研，输出数据洞察报告，为选品、定价决策提供科学依据。采用问卷调研、订单数据分析结合的方式，收200+个人及30+ B端客户的购买行为、偏好数据（覆盖10类核心产品），运用数据分析法识别8个核心产品卖点与5类用户需求痛点；调研30+竞品的定价体系、促销策略及客户评价，建立价格趋势预测模型（准确率82%），量化分析价格与用户接受度的关联性。输出的用户行为研究报告推动选品结构优化（淘汰3类滞销品、新增5类潜力品），核心产品点击率提升16%；基于研究的定价策略优化助力市场占有率提升8%，形成可复用的用户行为研究与策略落地方法论.\n\n同社の製品選定および価格設定戦略にはデータによる裏付けが不足しており、主力製品のクリック率はわずか12%、市場シェアは5%未満にとどまっていました。そこで、ユーザー行動の分析を通じて潜在的な需要を掘り起こし、市場ニーズに適合した戦略への最適化を図る必要がありました。インターン期間中、ユーザーの購買行動および競合製品に関する調査を実施し、データに基づくインサイトレポートを作成することで、製品選定や価格設定の意思決定に科学的な根拠を提供しました。アンケート調査と注文データの分析を組み合わせ、個人顧客200名以上および法人顧客30社以上から購買行動や選好に関するデータ（主力製品10カテゴリーを網羅）を収集しました。データ分析手法を用いて、主力製品のセールスポイント8点とユーザーのニーズ・課題（ペインポイント）5項目を特定しました。また、競合製品30点以上の価格体系、販促戦略、顧客評価を調査し、価格推移予測モデル（精度82%）を構築するとともに、価格とユーザーの受容性との相関関係を定量的に分析しました。作成したユーザー行動分析レポートに基づき製品ラインナップの最適化（売れ行きの悪い3カテゴリーを廃止し、有望な5カテゴリーを新規導入）を行った結果、主力製品のクリック率が16%向上しました。さらに、調査に基づく価格戦略の最適化により市場シェアが8%拡大し、再現性のある「ユーザー行動分析および戦略実行のメソドロジー（手法）」を確立しました。"
+        },
+        {
+          "id": "86af7581-8081-469d-b8df-3369e3c28f17",
+          "kind": "education",
+          "period": "2024.02-2025.11",
+          "title": "Master of Interaction Design and Electronic Arts  ",
+          "organization": "Sydney School of Architecture, Design and Planning, The University of Sydney (QS18)",
+          "description": "Graduated with Distinction.\nSkill: User experience research, interaction behavior analysis, and design evaluation; research synthesis, user personas, and user journey maps."
+        },
+        {
+          "id": "6e638114-4908-4c4d-ace2-eb775cd9f99f",
+          "kind": "experience",
+          "period": "2023.02-2023.06",
+          "title": "Medical Record Integration Project – Australian Department of Health, NSW Health, and the University of Sydney Faculty of Medicine",
+          "organization": "Researcher",
+          "description": "Data silos exist among Australia’s \"My Health Record\" system, GP records, and hospital medical record systems; frequent conflicts between information sharing and privacy protection have impacted the experience of over one million users and overall healthcare efficiency. I participated in a cross-institutional integration project, identifying system conflicts and clarifying stakeholder requirements to provide the data foundation for a compliant, tailored integration solution. I employed data mapping, cross-departmental meetings, and user research to facilitate conflict identification, ensure multi-perspective alignment, and accurately meet user needs. Leading a 10-person cross-disciplinary team, I mapped over 120 core data fields and organized more than 20 cross-departmental meetings, conducting research and validation across various institutional levels and user demographics.\n\nI distilled six key conflict points; the core insight was that inconsistent data formats and ambiguous privacy permission boundaries necessitated a balance between user convenience and privacy requirements. I helped design two alternative approaches and one comprehensive solution—incorporating data synchronization and privacy protection workflows—while conducting feasibility analyses and aligning stakeholder expectations. The solution framework passed milestone reviews and received endorsement from health authorities; three core resolution strategies were incorporated into the current implementation plan, laying the groundwork for data interoperability and helping the project achieve its interim goals.\n\n职责: 研究员\n澳大利亚My Health Record、GP 及医院病历系统存在数据孤岛，信息共享与隐私保护冲突频发，影响超100万用户体验及医疗效率。参与跨机构整合项目、识别系统冲突点、明确各方诉求，为合规适配的整合方案提供数据支撑。采用数据梳理、跨部门会议、用户调研法，分别支撑冲突定位、多视角兼顾与需求贴合。协同10人跨领域团队，梳理120余项核心数据字段，组织20余次跨部门会议，覆盖多层级机构及不同年龄段用户完成调研验。提炼6大核心冲突点，核心洞察为数据格式不统一、隐私权限界定模糊，需平衡用户便捷与隐私需求。参与设计2套备选思路及1含套数据同步、隐私保护流程的方案，完成可行性论证并协调各方对齐诉求。方案框架通过阶段性评审并获卫生部门认可，3项核心解决思路纳入当期推进计划，为数据互通奠定基础，助力项目达成阶段性目标。"
+        },
+        {
+          "id": "0cf04e0c-bc7e-4e08-96a0-a57f1f0bb9e3",
+          "kind": "experience",
+          "period": "2022.02-2022.09",
+          "title": "Online Visiting Robot Project ",
+          "organization": "Museums of New South Wales, Australia, Partners with Sage Lab (R&D)",
+          "description": "Role: Design Team- Interface Design and Information Architecture Assistant\nThe online visitation channel for the New South Wales museum was limited, attracting only around 2,000 monthly visitors; it failed to meet the diverse needs of different user groups, resulting in low engagement. As a team member, I contributed to the project's optimization, focusing on refining the website design and robot operation protocols to enhance feasibility and improve the user experience. I drove these improvements through user persona analysis and usability testing. I participated in persona research covering over 500 potential users to map out usage paths for three distinct groups and conducted five rounds of usability testing and iterative design to identify pain points and facilitate implementation. We identified three key issues: complex operations, unengaging content, and weak interactivity. I helped restructure the website's information architecture (adjusting the layout of eight core sections), designed gamification mechanisms for robot operations (introducing a task system and point-based rewards), and produced optimized design prototypes and operation manuals. The proposed design received joint approval from the museum project team and Sage Lab, with the gamified operation mechanism recognized as the \"most innovative optimization feature.\"\n\n职责: 设计团队- 界面设计以及信息架构辅助设计师\n新南威尔士州博物馆线上参观渠道单一，月均访客仅2000+，未满足各群体差异化需求，用户参与度低迷。作为团队成员，我参与项目优化，核心是优化网站设计与机器人操作方案，提升项目可行性及用户体验预期。通过用户画像分析、可用性测试推进优化。参与覆盖500+潜在用户的画像调研，预测三类群体使用路径；开展5轮可用性测试与方案迭代，支撑痛点定位及方案落地。识别出操作复杂、内容枯燥、互动性弱三大痛点。我参与重构网站信息架构（调整8个核心栏目布局），为机器人操作方案设计游戏化机制（新增任务系统、积分奖励），输出优化版设计原型与操作手册。设计方案获博物馆项目组与Sage Lab 联合认可，游戏化操作机制获评“最具创新价值优化点”."
+        },
+        {
+          "id": "df6c7222-cca4-4f28-a6cc-b18866acf5c9",
+          "kind": "experience",
+          "period": "2021.02-2024.01",
+          "title": "Bachelor of Design (Interaction Design)",
+          "organization": "Sydney School of Architecture, Design and Planning,The University of Sydney (QS18)",
+          "description": "Graduated with Distinction.\nSkill: User Research, Qualitative Analysis, Quantitative Analysis, User Interviews, User Experience (UX) Design, User Interface Design, Human-Centered Design, Product Thinking, Strategic Design."
+        }
+      ],
+      "images": [],
+      "logos": [
+        {
+          "id": "logo-1",
+          "name": "FORMA",
+          "image": ""
+        },
+        {
+          "id": "logo-2",
+          "name": "STILL",
+          "image": ""
+        },
+        {
+          "id": "logo-3",
+          "name": "MONO",
+          "image": ""
+        },
+        {
+          "id": "logo-4",
+          "name": "FIELD",
+          "image": ""
+        },
+        {
+          "id": "logo-5",
+          "name": "ARC",
+          "image": ""
+        },
+        {
+          "id": "logo-6",
+          "name": "KIN",
+          "image": ""
+        }
+      ]
     },
     "projects": [
       {
@@ -165,15 +271,98 @@
         }
       },
       {
-        "id": "project-3",
-        "name": "Objects of Tomorrow",
-        "category": "Branding / Strategy",
+        "id": "f6ef86a0-fa21-47d7-b4ce-afcc40ce6acc",
+        "name": "NEXUS",
+        "category": "UI/UX Design",
         "year": "2025",
-        "image": "/images/work-03.png",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. A study in form, feeling, and the spaces in between."
+        "image": "/api/media/a3c33f91-e060-437d-81ac-109ea177f051",
+        "mediaType": "image",
+        "description": "NEXUS is a conceptual Urban Intelligence Platform designed for city operations managers. By integrating data on urban traffic, pedestrian flow, energy, the environment, and incidents, it enables operators to rapidly grasp the city's status, anticipate potential risks, and formulate response strategies.",
+        "details": {
+          "client": "Concept Project",
+          "role": "Concept Design/ UI&UX Design",
+          "duration": "13 weeks",
+          "challenge": "Urban operation data is often fragmented across multiple systems, forcing operators to switch between platforms and manually interpret relationships between different data sources. NEXUS was designed to bring mobility, crowd, environmental and event data into one unified dashboard, helping users understand anomalies, anticipate risks and respond more efficiently.",
+          "approach": "The project began with user research and competitor analysis, followed by persona development, user journey mapping and information architecture to define key needs and workflows. I then developed wireframes, the dashboard UI and an interactive prototype, refining information hierarchy, data visualisation and the overall user experience through iteration.\n\nThe core user experience shifts away from traditional data dashboards toward a flow of:\nCity Pulse → Signal Conflict → Future Bloom → Intervention → Recovery\nThe goal is not merely to display more data, but to help city operators quickly understand:\nWhat is happening → Why → What may happen next → What should we do",
+          "outcome": "The final outcome is a seven-screen city operations dashboard covering city overview, anomaly detection, event analysis, risk prediction, recommended responses, action confirmation and impact review, creating a complete operational flow from monitoring to decision-making.\n\nMy Role:\nUser Research\nCompetitor Analysis\nPersona Development\nUser Journey\nInformation Architecture\nUser Flow\nWireframing\nDashboard UI Design\nData Visualisation\nInteractive Prototype\nDesign Iteration\n\nFor more information please check out:\n\nhttps://app.notion.com/p/NEXUS-3ceb03f5de6f801b9eb7f2a68c205886?source=copy_link\n\nhttps://www.figma.com/proto/0CjW2TeTZhxJEHWWl5E6Py/Untitled?node-id=22-1178&t=iHuHDnhRBb0m0NGt-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=22%3A1178&show-proto-sidebar=1",
+          "effect": "auto",
+          "palette": "auto",
+          "seed": 79195,
+          "gallery": []
+        }
+      },
+      {
+        "id": "project-3",
+        "name": "Void/24 Season One Collection",
+        "category": "Product Design",
+        "year": "2026",
+        "image": "/api/media/0f1ba209-dba2-447a-9d06-20734dd668b7",
+        "mediaType": "image",
+        "description": "VOID/24 is a fragrance brand centered on the concept of \"captivating scents that defy precise description.\" The number \"24\" represents the twenty-four hours of the day. The S1 Collection is inspired by four distinct times of day, using scent, color, texture, and visual atmosphere to express how the fragrances evolve across these different moments.",
+        "details": {
+          "client": "Void/24",
+          "role": "Product Design/Branding",
+          "duration": "7 weeks",
+          "challenge": "The goal for S1 was to establish clear, cohesive distinctions among the four fragrances while maintaining VOID/24’s established brand identity.\nKey challenges included:\nEnsuring the four products are instantly distinguishable yet clearly part of the same brand system.\nTranslating the concept of \"time\" into color, texture, and olfactory experiences.\nMoving away from traditional perfume advertising that relies heavily on product display, and instead creating a sensory visual language that leaves room for imagination.\n\nS1 的目标是在保持 VOID/24 既有品牌识别的同时，为四款香氛建立清晰且统一的系列差异。\n主要挑战包括：\n让四款产品一眼可区分，但仍属于同一品牌系统\n将“时间”转化为颜色、材质和气味感受\n避免传统香水广告过度依赖产品展示，建立更具想象空间的感官视觉语言",
+          "approach": "The design process is structured as follows:\nConcept Direction → Time & Scent Mapping → Packaging System → Material & Colour Exploration → Campaign Art Direction → Visual Refinement\nI defined four distinct temporal states—06:17, 13:42, 19:08, and 00:36—and established differentiation through liquid color, label material, glass transparency, cap finish, and atmospheric mood, while maintaining a consistent bottle silhouette, typography, and information structure. For the campaign visuals, I minimized direct product exposure, opting instead to evoke the associations triggered by the scents through elements such as light and shadow on water, skin, fabrics, stone, smoke, foliage, and natural light specific to each time of day.\n\n设计过程主要分为：\nConcept Direction → Time & Scent Mapping → Packaging System → Material & Colour Exploration → Campaign Art Direction → Visual Refinement\n我将四个时间状态分别定义为 06:17 / 13:42 / 19:08 / 00:36，并通过液体颜色、标签材质、玻璃透明度、瓶盖处理和环境氛围建立差异，同时保持统一的瓶型、Typography 和信息结构。 在 Campaign 视觉中，我减少直接的产品露出，更多使用水面光影、皮肤、织物、石材、烟雾、植物和不同时间的自然光，去表达香味带来的联想。",
+          "outcome": "Ultimately, a comprehensive branding system for the VOID/24 S1 Collection was developed, comprising:\nPackaging designs for four fragrances\nLogo and typography system\nColor and material system\nPackaging design\nBrand concept imagery\nCampaign visual direction\nS1 Collection key visuals\nThe core visual logic established is:\nSame structure. Different states.\nThe four products evolve through variations in time, light, material, and the mood evoked by the scent, while consistently embodying the brand’s characteristics of restraint, sensuality, and modernity.\n\n最终完成了一套完整的 VOID/24 S1 Collection Branding System，包括：\n4 款香氛包装设计\nLogo 与 Typography System\nColour & Material System\nPackaging Design\nBrand Concept Imagery\nCampaign Visual Direction\nS1 Collection Key Visuals\n最终形成的核心视觉逻辑是：\nSame structure. Different states.\n四款产品通过时间、光线、材质与气味情绪产生变化，同时保持 VOID/24 克制、感官化和现代的品牌特征。",
+          "effect": "auto",
+          "palette": "auto",
+          "seed": 39736,
+          "gallery": [
+            {
+              "id": "detail-1",
+              "image": "/api/media/0f1ba209-dba2-447a-9d06-20734dd668b7",
+              "caption": "VOID/24",
+              "layout": "half"
+            },
+            {
+              "id": "60ac972a-6668-4878-99ba-75eb86d73bf2",
+              "image": "/api/media/9d487ef2-5f68-4b3f-b5a3-52dc57914579",
+              "mediaType": "image",
+              "caption": "06:17",
+              "layout": "half"
+            },
+            {
+              "id": "95b6eaff-ebe0-4566-983a-600335ef7598",
+              "image": "/api/media/aa310546-d9b4-440e-bd06-4977f651a6c5",
+              "mediaType": "image",
+              "caption": "13:42",
+              "layout": "half"
+            },
+            {
+              "id": "f8b7a8e3-3d0e-4873-a930-ca259d273e63",
+              "image": "/api/media/74cd5582-bc54-4cee-b859-d06b23f543f7",
+              "mediaType": "image",
+              "caption": "19:08",
+              "layout": "half"
+            },
+            {
+              "id": "1835e94b-569c-4494-99b5-ddb209fdedc1",
+              "image": "/api/media/5f9342d3-c389-45f9-a5bf-d927af359a63",
+              "mediaType": "image",
+              "caption": "00:36",
+              "layout": "half"
+            },
+            {
+              "id": "6df3c4dc-572f-4e72-b7f5-c42de3810e6b",
+              "image": "/api/media/07ea6d40-83b2-46e3-87a8-86b490bbf4f2",
+              "mediaType": "image",
+              "caption": "Typography",
+              "layout": "wide"
+            },
+            {
+              "id": "21cffbfb-1a92-467c-9f8a-5f4a76ef3858",
+              "image": "/api/media/e01552d4-6139-4ab5-bc09-a9e968dfa223",
+              "mediaType": "image",
+              "caption": "Visual Explore",
+              "layout": "wide"
+            }
+          ]
+        }
       }
     ]
   },
-  "version": 7,
-  "updatedAt": "2026-09-12T04:48:28.571Z"
+  "version": 8,
+  "updatedAt": "2026-09-12T14:23:59.594Z"
 }
