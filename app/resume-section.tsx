@@ -1,5 +1,5 @@
 'use client';
-import { useState, type CSSProperties } from 'react';
+import { type CSSProperties } from 'react';
 import { type Resume, resumeKinds } from '@/lib/resume';
 import './resume.css';
 
@@ -10,7 +10,6 @@ export default function ResumeSection({
   resume: Resume;
   name: string;
 }) {
-  const [paused, setPaused] = useState(false);
   if (!resume.enabled) return null;
   return (
     <section
@@ -19,11 +18,12 @@ export default function ResumeSection({
       aria-labelledby="resume-title"
     >
       <div className="immersive-section-top" data-reveal>
-        <span>03 / THE JOURNEY</span>
+        <span><b className="section-number">03</b> / THE JOURNEY</span>
         <span>EXPERIENCE · EDUCATION · EXPLORATION</span>
       </div>
       <div className="resume-layout">
         <div className="resume-introduction">
+          <span className="resume-kicker">A FIELD GUIDE TO THE WORK</span>
           <h2 id="resume-title" data-reveal>
             {resume.title}
           </h2>
@@ -45,7 +45,7 @@ export default function ResumeSection({
         </div>
         <div className="resume-timeline">
           {resume.entries.map((entry, i) => (
-            <article className="resume-entry" key={entry.id} data-reveal>
+            <article className={`resume-entry resume-entry-${entry.kind}`} key={entry.id} data-reveal>
               <div className="resume-entry-top">
                 <span>{entry.period}</span>
                 <span>{resumeKinds[entry.kind]}</span>
@@ -91,24 +91,12 @@ export default function ResumeSection({
       )}
       {resume.logos.length > 0 && (
         <div
-          className={`resume-logos ${paused ? 'logos-paused' : ''}`}
+          className="resume-logos"
           style={{ '--logo-duration': `${resume.logoSpeed}s` } as CSSProperties}
           data-reveal
         >
           <div className="resume-logos-heading">
             <h3>{resume.logoTitle}</h3>
-            {resume.logos.length > 1 && (
-              <button
-                type="button"
-                aria-pressed={paused}
-                aria-label={
-                  paused ? 'Resume logo scrolling' : 'Pause logo scrolling'
-                }
-                onClick={() => setPaused(!paused)}
-              >
-                {paused ? '▷ Resume logos' : 'Ⅱ Pause logos'}
-              </button>
-            )}
           </div>
           <div
             className={`resume-logo-window ${resume.logos.length === 1 ? 'single-logo' : ''}`}

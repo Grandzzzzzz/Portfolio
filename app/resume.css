@@ -467,3 +467,203 @@
     transition: none;
   }
 }
+
+/* Editorial redesign for the journey section. */
+.immersive-resume {
+  position: relative;
+  overflow: hidden;
+  padding-top: 120px;
+  padding-bottom: 145px;
+  background:
+    radial-gradient(circle at 78% 18%, #52664e35, transparent 24%),
+    #0d120f;
+}
+.immersive-resume .immersive-section-top {
+  position: relative;
+  z-index: 1;
+  border-top-color: #d7e3d226;
+}
+.resume-layout {
+  position: relative;
+  grid-template-columns: minmax(280px, 0.75fr) minmax(0, 1.4fr);
+  gap: 10%;
+  padding: 100px 0 115px;
+}
+.resume-introduction {
+  top: 90px;
+}
+.resume-kicker {
+  display: block;
+  margin-bottom: 22px;
+  color: #819481;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+}
+.resume-introduction h2 {
+  font-size: clamp(62px, 8vw, 145px);
+  line-height: 0.88;
+  letter-spacing: -0.085em;
+  margin-bottom: 36px;
+}
+.resume-introduction > p {
+  max-width: 390px;
+  font-size: 16px;
+  line-height: 1.9;
+}
+.resume-identity {
+  min-height: 245px;
+  margin-top: 58px;
+  padding: 25px;
+  border-color: #c7d6c144;
+  background: linear-gradient(145deg, #1c2b20, #111a14);
+  box-shadow: 12px 12px 0 #c7d6c10d;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s;
+}
+.resume-identity:hover {
+  transform: translate(-8px, -8px) rotate(-1deg);
+  box-shadow: 20px 20px 0 #c7d6c11a;
+}
+.resume-identity-mark {
+  color: #c7d6c1;
+}
+.resume-timeline {
+  border-left: 0;
+  counter-reset: journey;
+}
+.resume-entry {
+  counter-increment: journey;
+  margin-bottom: 20px;
+  padding: 30px 34px 34px;
+  border: 1px solid #d7e3d226;
+  background: #172019aa;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), background 0.35s, border-color 0.35s;
+}
+.resume-entry:hover {
+  transform: translateX(16px);
+  background: #243226;
+  border-color: #c7d6c177;
+}
+.resume-entry:before {
+  left: auto;
+  right: 25px;
+  top: 29px;
+  width: 9px;
+  height: 9px;
+  background: #b6c9b0;
+  box-shadow: 0 0 0 6px #172019, 0 0 20px #b6c9b099;
+}
+.resume-entry:after {
+  display: none;
+}
+.resume-entry-top {
+  padding-right: 25px;
+  color: #a7b9a5;
+}
+.resume-entry-top > span:last-child {
+  color: #c7d6c1;
+}
+.resume-entry h3 {
+  max-width: 720px;
+  margin-top: 30px;
+  font-size: clamp(27px, 3.2vw, 52px);
+  letter-spacing: -0.055em;
+}
+.resume-organization {
+  color: #d4dfd0;
+}
+.resume-description {
+  max-width: 650px;
+  font-size: 14px;
+}
+.resume-entry-index {
+  display: block;
+  margin-top: 28px;
+  color: #829581;
+}
+.resume-entry-index:before {
+  content: 'FIELD NOTE ';
+  color: #657766;
+  font: 10px Arial, sans-serif;
+  letter-spacing: 0.12em;
+}
+.resume-photos {
+  position: relative;
+  z-index: 1;
+  gap: 30px;
+  margin: 0 0 110px;
+}
+.resume-photo > div {
+  padding: 14px;
+  background: #1c2a20;
+  border: 1px solid #d7e3d226;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s;
+}
+.resume-photo:nth-child(even) > div {
+  transform: rotate(2deg);
+}
+.resume-photo:nth-child(odd) > div {
+  transform: rotate(-1.5deg);
+}
+.resume-photo:hover > div {
+  transform: rotate(0) scale(1.025);
+  border-color: #c7d6c177;
+}
+.resume-photo figcaption {
+  padding: 0 4px;
+  color: #afbfac;
+}
+.resume-logos {
+  padding-top: 32px;
+  border-top-color: #d7e3d226;
+}
+.resume-logos-heading h3 {
+  color: #c7d6c1;
+}
+.resume-logo-track {
+  animation-timing-function: cubic-bezier(0.37, 0, 0.63, 1);
+}
+.resume-logo-group {
+  gap: 70px;
+}
+.resume-wordmark {
+  color: #d7e3d2;
+}
+@media (max-width: 700px) {
+  .immersive-resume {
+    padding-top: 75px;
+    padding-bottom: 90px;
+  }
+  .resume-layout {
+    grid-template-columns: 1fr;
+    gap: 65px;
+    padding: 60px 0 75px;
+  }
+  .resume-introduction {
+    position: static;
+  }
+  .resume-introduction h2 {
+    font-size: clamp(60px, 17vw, 105px);
+  }
+  .resume-entry {
+    padding: 24px 20px 27px;
+  }
+  .resume-entry:hover {
+    transform: translateX(7px);
+  }
+  .resume-entry h3 {
+    font-size: 30px;
+  }
+  .resume-photo:nth-child(even) > div,
+  .resume-photo:nth-child(odd) > div {
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .resume-identity,
+  .resume-entry,
+  .resume-photo > div {
+    transition: none;
+    transform: none;
+  }
+}

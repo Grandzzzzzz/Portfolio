@@ -171,10 +171,14 @@ export default function Portfolio({ content }: { content: Content }) {
             PROCESS
           </span>
           <div className="immersive-section-top" data-reveal>
-            <span>02 / BEHIND THE WORK</span>
+            <span><b className="section-number">02</b> / BEHIND THE WORK</span>
             <span>{content.name.toUpperCase()}</span>
           </div>
-          <h2 data-reveal>{content.aboutTitle}</h2>
+          <div className="about-editorial-head" data-reveal>
+            <span className="about-kicker">A WORKING METHOD</span>
+            <h2>{content.aboutTitle}</h2>
+            <span className="about-index">02—04</span>
+          </div>
           <div className="immersive-about-copy" data-reveal>
             <span className="about-asterisk" aria-hidden="true">
               ✳
@@ -184,7 +188,7 @@ export default function Portfolio({ content }: { content: Content }) {
               {content.aboutExtra && <p>{content.aboutExtra}</p>}
             </div>
           </div>
-          <div className="immersive-services">
+          <div className="immersive-services" aria-label="Services">
             {content.services.map((s, i) => (
               <div key={`${s}-${i}`} data-reveal>
                 <span>{String(i + 1).padStart(2, '0')}</span>

@@ -874,3 +874,157 @@
     box-shadow: 0 0 8px #73c47c66;
   }
 }
+
+/* Editorial redesign for the method section. */
+.immersive-about {
+  background:
+    linear-gradient(135deg, #111812 0%, #172119 52%, #101510 100%);
+  padding-top: 120px;
+  padding-bottom: 150px;
+}
+.immersive-about .immersive-section-top {
+  border-top-color: #d7e3d226;
+  color: #a8b9a5;
+}
+.section-number {
+  display: inline-block;
+  margin-right: 9px;
+  color: #c7d6c1;
+  font: italic 1.5em Georgia, serif;
+  letter-spacing: -0.08em;
+}
+.about-editorial-head {
+  display: grid;
+  grid-template-columns: 1fr minmax(0, 2.2fr) auto;
+  gap: 30px;
+  align-items: end;
+  margin: 80px 0 72px;
+}
+.about-kicker,
+.about-index {
+  color: #809180;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  line-height: 1.5;
+}
+.about-kicker {
+  align-self: start;
+  padding-top: 18px;
+}
+.about-editorial-head h2 {
+  margin: 0;
+  font-size: clamp(58px, 10vw, 170px);
+  line-height: 0.91;
+  letter-spacing: -0.075em;
+  text-wrap: balance;
+}
+.about-index {
+  padding-bottom: 14px;
+  white-space: nowrap;
+}
+.immersive-about-copy {
+  grid-template-columns: 0.65fr 1.35fr;
+  gap: 9%;
+  align-items: start;
+  margin: 0 0 110px;
+}
+.about-asterisk {
+  width: min(220px, 22vw);
+  height: min(220px, 22vw);
+  font-size: min(190px, 19vw);
+  color: #b2c3ac;
+  justify-self: center;
+}
+.immersive-about-copy p {
+  max-width: 760px;
+  font-size: clamp(22px, 2.7vw, 43px);
+  line-height: 1.32;
+  letter-spacing: -0.035em;
+}
+.immersive-about-copy p + p {
+  max-width: 570px;
+  margin-top: 55px;
+  margin-left: 22%;
+  font-size: 15px;
+  line-height: 1.9;
+  letter-spacing: 0;
+}
+.immersive-services {
+  margin-left: 0;
+  border-top: 1px solid #d7e3d226;
+}
+.immersive-services > div {
+  display: grid;
+  grid-template-columns: 70px 1fr 40px;
+  min-height: 118px;
+  gap: 24px;
+  padding: 27px 0;
+  border-top: 0;
+  border-bottom: 1px solid #d7e3d226;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), background 0.4s, padding 0.4s;
+}
+.immersive-services > div:hover {
+  padding-left: 28px;
+  padding-right: 28px;
+  background: #c7d6c10d;
+  transform: none;
+}
+.immersive-services > div > span:first-child {
+  padding-top: 8px;
+  color: #829581;
+}
+.immersive-services h3 {
+  font-size: clamp(30px, 4vw, 68px);
+  letter-spacing: -0.055em;
+}
+.immersive-services > div > span:last-child {
+  align-self: center;
+  justify-self: end;
+  font-size: 22px;
+}
+@media (max-width: 700px) {
+  .immersive-about {
+    padding-top: 75px;
+    padding-bottom: 90px;
+  }
+  .about-editorial-head {
+    grid-template-columns: 1fr auto;
+    gap: 16px;
+    margin: 55px 0 50px;
+  }
+  .about-kicker {
+    grid-column: 1/-1;
+    padding-top: 0;
+  }
+  .about-editorial-head h2 {
+    font-size: clamp(52px, 16vw, 100px);
+  }
+  .immersive-about-copy {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    margin-bottom: 70px;
+  }
+  .about-asterisk {
+    justify-self: start;
+    width: 120px;
+    height: 120px;
+    font-size: 110px;
+  }
+  .immersive-about-copy p {
+    font-size: 25px;
+  }
+  .immersive-about-copy p + p {
+    margin-top: 35px;
+    margin-left: 0;
+  }
+  .immersive-services > div {
+    grid-template-columns: 38px 1fr 28px;
+    min-height: 92px;
+    gap: 12px;
+    padding: 20px 0;
+  }
+  .immersive-services > div:hover {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
