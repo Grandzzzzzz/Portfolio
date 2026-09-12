@@ -46,6 +46,34 @@
               "image": "/api/media/8301a1f4-33cc-435c-b0d3-4ca9fd1c6107",
               "mediaType": "image",
               "caption": "Landing Page",
+              "layout": "half"
+            },
+            {
+              "id": "b342063d-2094-462d-be7e-65d22a5f2f24",
+              "image": "/api/media/ec16fb25-abd7-4f71-a3c7-011df8f84f66",
+              "mediaType": "image",
+              "caption": "What's on/Details (Dark Version)",
+              "layout": "half"
+            },
+            {
+              "id": "7e00d10b-c30b-4a1e-8613-5d1c6ed971a4",
+              "image": "/api/media/b8ea7fac-6790-4c22-bc0c-cec4bad6f32b",
+              "mediaType": "image",
+              "caption": "Exhibition (Light Version)",
+              "layout": "half"
+            },
+            {
+              "id": "5d933e33-d927-419b-97fd-d4086f086c3d",
+              "image": "/api/media/06498934-0cbc-4184-8b19-236c335f961f",
+              "mediaType": "image",
+              "caption": "Visual Explore (Dark Version)",
+              "layout": "half"
+            },
+            {
+              "id": "0f9fc07b-3f62-4283-81d3-ed8eb7fe7b4f",
+              "image": "/api/media/4f87dbe8-a5b0-4f9d-961f-ed3b078a9bb3",
+              "mediaType": "image",
+              "caption": "Visual Explore (Light Version)",
               "layout": "wide"
             }
           ]
@@ -53,11 +81,88 @@
       },
       {
         "id": "project-2",
-        "name": "Between Spaces",
-        "category": "Editorial / Digital",
-        "year": "2025",
-        "image": "/images/work-02.png",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. A study in form, feeling, and the spaces in between."
+        "name": "Synthetic Memories",
+        "category": "AIGC Visual Series / Art Direction Project ",
+        "year": "2026",
+        "image": "/api/media/635fc520-6516-4055-80d3-03007722d52d",
+        "mediaType": "image",
+        "description": "#Nostalgia#Ordinary Life#False Memory#Japan 2000–2002#Human Traces#Imperfection#Familiarity\nNot surreal. Not perfect. Just strangely familiar",
+        "details": {
+          "client": "Self-initiated",
+          "role": "AI Art Direction",
+          "duration": "2 weeks",
+          "challenge": "Synthetic Memories is an AIGC visual series exploring fictional memories that feel strangely familiar. Through a collection of nine images, the project reconstructs everyday spaces from early-2000s Japan — swimming pools, classrooms, train stations, convenience stores, family homes, bedrooms, arcades, balconies and residential streets.Rather than creating surreal or futuristic imagery, the project focuses on ordinary environments, subtle human traces and period-specific details to explore how AI can generate places that never existed, yet still feel emotionally recognisable. Concept: What if AI could remember something that never happened? Synthetic Memories explores the idea of false visual memory — places that never existed, but contain enough familiar details to make viewers feel that they may have experienced them before. \n\nGenerative AI can produce visually impressive images quickly, but individual outputs often lack consistency, historical accuracy and meaningful visual direction.\nThe challenge was to create a complete visual series where each image could stand independently while still belonging to the same emotional and visual world.\n01 — Consistency\nHow can nine different environments feel like fragments of the same memory?\n02 — Authenticity\nHow can AI-generated environments reflect believable early-2000s Japanese everyday life rather than stereotypical nostalgia?\n03 — Emotional Familiarity\nHow can an image feel familiar without relying on famous landmarks, dramatic storytelling or obvious nostalgia?\n生成式人工智能能够迅速创作出视觉效果惊艳的图像，但单张作品往往缺乏一致性、历史真实感以及明确的视觉主旨。\n面临的挑战在于打造一个完整的视觉系列：既要确保每张图像能够独立成画，又要让它们共同归属于同一个情感与视觉世界。\n01 — 一致性\n如何让九个截然不同的场景，看起来像是同一段记忆的碎片？\n02 — 真实感\n如何让AI生成的场景呈现出21世纪初日本日常生活的真实质感，而非流于刻板印象的怀旧情调？\n03 — 情感共鸣\n如何在不依赖著名地标、戏剧化叙事或刻意怀旧元素的情况下，营造出一种熟悉亲切的感觉？",
+          "approach": "1. Concept & Visual Direction\nDefine the core idea, emotional tone, era and visual language.\n2. Reference Research\nResearch early-2000s Japanese environments, objects, technology, advertising and everyday behaviour.\n3. Prompt System\nBuild a reusable prompt structure covering environment, era, lighting, material, human traces, camera and constraints.\n4. Generate → Critique → Refine\nReview each output for realism, historical accuracy, visual consistency and narrative logic, then repeatedly adjust the prompt and image direction.\n5. Final Curation\nSelect and refine nine images that feel visually consistent while representing different fragments of the same fictional memory.\n6. 概念与视觉方向\n确立核心理念、情感基调、时代背景及视觉语言。\n7. 参考资料研究\n调研21世纪初日本的场景环境、物品、科技、广告及日常生活行为。\n8. 提示词（Prompt）系统\n构建一套可复用的提示词结构，涵盖环境、时代、光影、材质、人为痕迹、镜头视角及各项约束条件。\n9. 生成 → 评估 → 优化\n从真实感、历史准确性、视觉一致性及叙事逻辑等维度评估生成结果，并反复调整提示词与图像方向。\n10. 最终甄选\n挑选并精修九张图像，确保它们既保持视觉风格统一，又能呈现同一虚构记忆的不同片段。\nMaster Promot/母提示词(Demo):\nCreate a photorealistic AIGC image from the Synthetic Memories visual series.\nDepict [SCENE / ENVIRONMENT] in Japan around 2000–2002, at [TIME OF DAY]. The environment should feel ordinary, lived-in and historically believable rather than idealised or cinematic. Include subtle period-specific details in architecture, furniture, consumer products, technology, signage, clothing and human behaviour appropriate to early-2000s Japan.\nThe image should suggest that people have recently used or occupied the space, using restrained human traces such as [OBJECTS / SIGNS OF USE], but avoid excessive clutter or staged storytelling. Objects must be placed according to realistic everyday behaviour and environmental logic. .................The emotional tone should feel nostalgic, quiet, familiar and slightly uncertain — as if the viewer may have experienced this place before, despite it never having existed. Keywords: ordinary life, false memory, early-2000s Japan, lived-in.......... Avoid: futuristic design, cyberpunk, fantasy, anime illustration, glossy CGI, luxury interiors, dramatic staging, perfect cleanliness, excessive clutter, .......... stereotypical Japanese landmarks, over-saturated colours.\nKey part: Environment\n- Era\n- Human Traces\n- Material Logic\n- Period Accuracy\n- Lighting\n- Camera\n- Behaviour\n- Negative Constraints\nThe prompt was treated as a system, not a one-time instruction. Each generation was critiqued and adjusted based on realism, period accuracy and environmental logic. 该提示词被视为一个系统，而非一次性指令。每一次生成结果都会根据真实感、时代准确性和环境逻辑进行评估与调整。\nEXAMPLE:\nToo clean → add realistic signs of use\nToo wet → specify mostly dry outdoor concrete\nToo staged → reduce cinematic composition\nWrong phone era → replace smartphones with early-2000s feature phones\nRepetitive crowd behaviour → assign varied human actions",
+          "outcome": "The final outcome is a nine-image AIGC visual series built around a shared fictional memory of early-2000s Japan.Instead of using AI to maximise visual spectacle, the project uses generative tools as a controlled art-direction medium — refining historical detail, environmental logic, human behaviour and visual consistency through repeated critique and iteration.\n该项目的最终成果是一组由九张图像构成的 AIGC 视觉系列，围绕着一段关于 21 世纪初日本的共同虚构记忆展开。项目并未利用 AI 追求极致的视觉奇观，而是将生成式工具作为一种受控的艺术指导媒介——通过反复的审视与迭代，不断打磨历史细节、环境逻辑、人物行为及视觉风格的一致性。\n\nPictures list:\n01.Last Summer: Childhood summer after everyone left.\n02. After School: A classroom just after the day ended.\n03. Waiting for the 18:41: An ordinary evening commute.\n04. Convenience Store 23:48: The city has not completely gone to sleep.\n05. Dinner for Four: Someone has not come home yet.\n06. Room: A private world frozen in 2002.\n07. Seaside Arcade: The last summer before a childhood place disappeared.\n08. Balcony 19:16: Celebration after everyone left.\n09. I Think I've Been Here Before :Somewhere that memory insists existed.\n\nThis project changed how I think about generative AI. The most difficult part was not generating an attractive image, but deciding what should feel believable, what should feel imperfect, and what should be removed.\n\nI learned that effective AIGC art direction requires continuous observation, research, critique and refinement. The quality of the final result depends less on a single prompt and more on the ability to recognise when an image feels wrong — and understand why.\n\nThe most important AI skill was not knowing what to generate, but knowing what felt wrong.",
+          "effect": "auto",
+          "palette": "auto",
+          "seed": 39735,
+          "gallery": [
+            {
+              "id": "fc810fa2-e4a7-46b4-b191-94e4a0467aa2",
+              "image": "/api/media/6f5c1b5c-6a6b-4fed-a1b1-7acdfbca6990",
+              "mediaType": "image",
+              "caption": "01. Last Summer",
+              "layout": "half"
+            },
+            {
+              "id": "b0b37e17-8910-49af-ab3f-cdffbad86270",
+              "image": "/api/media/f4f31ead-097c-41e3-bccf-319720b47801",
+              "mediaType": "image",
+              "caption": "02. After School",
+              "layout": "half"
+            },
+            {
+              "id": "b22266ae-7619-414a-b577-b008881fb8ac",
+              "image": "/api/media/796006e2-59c1-404d-849c-90e24ff7fc7b",
+              "mediaType": "image",
+              "caption": "03. Waiting for the 18:41",
+              "layout": "half"
+            },
+            {
+              "id": "1a85a788-5bef-4d71-859e-f9912f0072db",
+              "image": "/api/media/4d179662-60b1-47dc-a472-2d103f7d5583",
+              "mediaType": "image",
+              "caption": "04. Convenience Store 23:48 ",
+              "layout": "half"
+            },
+            {
+              "id": "ce57cb07-fa1f-4e25-97bb-dff4afce6cbf",
+              "image": "/api/media/8a32a8f5-ab07-4ae2-a634-b62ca68dc6b7",
+              "mediaType": "image",
+              "caption": "05. Dinner for Four",
+              "layout": "half"
+            },
+            {
+              "id": "3c7da33f-a8ca-4898-91ad-26ec1079f21e",
+              "image": "/api/media/42b3754e-8dc8-488a-865e-b9986213a2bb",
+              "mediaType": "image",
+              "caption": "06. Room",
+              "layout": "half"
+            },
+            {
+              "id": "60e636bc-50b0-4f75-bdb8-ebc2522acf26",
+              "image": "/api/media/f9a9d54d-4c58-43cd-a86f-999a564ac9ff",
+              "mediaType": "image",
+              "caption": "07. Seaside Arcade",
+              "layout": "half"
+            },
+            {
+              "id": "10f7a5e8-92a1-4f70-b325-4d1398788d62",
+              "image": "/api/media/18d2e919-d84f-4d37-b9c5-68774b4181a5",
+              "mediaType": "image",
+              "caption": "08. Balcony 19:16",
+              "layout": "half"
+            },
+            {
+              "id": "101f3788-c75e-4155-a332-7aae150321ea",
+              "image": "/api/media/fb3780fb-c9cc-4796-863a-6ac440188d73",
+              "mediaType": "image",
+              "caption": "09. I Think I've Been Here Before",
+              "layout": "wide"
+            }
+          ]
+        }
       },
       {
         "id": "project-3",
@@ -69,6 +174,6 @@
       }
     ]
   },
-  "version": 6,
-  "updatedAt": "2026-09-11T13:37:45.691Z"
+  "version": 7,
+  "updatedAt": "2026-09-12T04:48:28.571Z"
 }
