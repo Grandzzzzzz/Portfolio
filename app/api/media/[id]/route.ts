@@ -9,7 +9,12 @@ async function getVercelStaticMedia(request: Request, id: string) {
   const metadata=await fetch(new URL(`/uploads/${id}.bin.json`,request.url));
   if(metadata.ok){const value=await metadata.json() as {contentType?:unknown};if(typeof value.contentType==='string')contentType=value.contentType;}
  }catch{}
- return {body:asset.body,size:Number(asset.headers.get('content-length')||0),httpEtag:asset.headers.get('etag')||`"${id}"`,httpMetadata:{contentType},arrayBuffer:()=>asset.arrayBuffer()};
+ const contentLength=Number(asset.headers.get('content-length'));
+ if(Number.isSafeInteger(contentLength)&&contentLength>0){
+  return {body:asset.body,size:contentLength,httpEtag:asset.headers.get('etag')||`"${id}"`,httpMetadata:{contentType},arrayBuffer:()=>asset.arrayBuffer()};
+ }
+ const bytes=await asset.arrayBuffer();
+ return {body:new Blob([bytes],{type:contentType}).stream(),size:bytes.byteLength,httpEtag:asset.headers.get('etag')||`"${id}"`,httpMetadata:{contentType},arrayBuffer:async()=>bytes};
 }
 
 export async function GET(request:Request,{params}:{params:Promise<{id:string}>}){
