@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useState, type CSSProperties } from 'react';
+import { useEffect, useRef, useState, type CSSProperties } from 'react';
 import type { Content } from '@/lib/content';
 import HeroVisual from './hero-visual';
 import MotionFrame from './motion-frame';
@@ -8,6 +8,7 @@ import { defaultResume } from '@/lib/resume';
 import './immersive.css';
 export default function Portfolio({ content }: { content: Content }) {
   const works = content.projects;
+  const aboutRef = useRef<HTMLElement>(null);
   const [time, setTime] = useState('');
   useEffect(() => {
     const update = () =>
@@ -149,7 +150,26 @@ export default function Portfolio({ content }: { content: Content }) {
             ))}
           </div>
         </section>
-        <section className="immersive-about" id="about">
+        <section
+          className="immersive-about"
+          id="about"
+          ref={aboutRef}
+          onPointerMove={(event) => {
+            const rect = aboutRef.current?.getBoundingClientRect();
+            if (!rect) return;
+            aboutRef.current?.style.setProperty(
+              '--about-shift-x',
+              `${(((event.clientX - rect.left) / rect.width) - 0.5) * 40}px`,
+            );
+            aboutRef.current?.style.setProperty(
+              '--about-shift-y',
+              `${(((event.clientY - rect.top) / rect.height) - 0.5) * 40}px`,
+            );
+          }}
+        >
+          <span className="about-watermark" aria-hidden="true">
+            PROCESS
+          </span>
           <div className="immersive-section-top" data-reveal>
             <span>02 / BEHIND THE WORK</span>
             <span>{content.name.toUpperCase()}</span>
