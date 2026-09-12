@@ -82,9 +82,6 @@ export default function Portfolio({ content }: { content: Content }) {
                   Open for selected collaborations
                 </span>
               )}
-              <a className="discover-button" href="#works">
-                Explore my work <span>↘</span>
-              </a>
             </div>
           </div>
           <span className="spotlight-hint" aria-hidden="true">

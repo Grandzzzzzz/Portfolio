@@ -175,7 +175,7 @@
   display: flex;
   flex-direction: column;
   gap: 18px;
-  align-items: start;
+  align-items: end;
 }
 .immersive-status {
   font-size: 12px;
@@ -187,28 +187,18 @@
   width: 5px;
   height: 5px;
   border-radius: 100%;
-  background: #e6bb8b;
-  box-shadow: 0 0 15px #e6bb8b88;
+  animation: availability-pulse 2.2s ease-in-out infinite;
 }
-.discover-button {
-  display: flex;
-  align-items: center;
-  gap: 46px;
-  padding: 18px 25px;
-  border-radius: 100px;
-  background: #d1ad85;
-  color: #191c18;
-  font-size: 14px;
-  font-weight: 500;
-  transition:
-    background 0.3s,
-    transform 0.3s,
-    box-shadow 0.3s;
-}
-.discover-button:hover {
-  background: #e7c39a;
-  transform: translateY(-3px);
-  box-shadow: 0 12px 35px #0003;
+@keyframes availability-pulse {
+  0%,
+  100% {
+    background: #73c47c;
+    box-shadow: 0 0 14px #73c47c99;
+  }
+  50% {
+    background: #8d948f;
+    box-shadow: 0 0 4px #8d948f55;
+  }
 }
 .spotlight-hint {
   position: absolute;
@@ -730,12 +720,8 @@
     font-size: 12px;
   }
   .hero-discover {
-    width: 100%;
-  }
-  .discover-button {
-    justify-content: space-between;
-    width: 100%;
-    padding: 16px 22px;
+    width: auto;
+    align-self: end;
   }
   .immersive-status {
     font-size: 11px;
@@ -813,9 +799,13 @@
     transition: none;
   }
   .immersive-project-media img,
-  .immersive-project-media video,
-  .discover-button {
+  .immersive-project-media video {
     transition: none !important;
     transform: none !important;
+  }
+  .immersive-status i {
+    animation: none !important;
+    background: #73c47c;
+    box-shadow: 0 0 8px #73c47c66;
   }
 }
