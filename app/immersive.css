@@ -546,27 +546,6 @@
   font-size: 12px;
   color: #a0a79d;
 }
-.site-motion-toggle {
-  position: fixed;
-  right: 24px;
-  bottom: 20px;
-  z-index: 50;
-  display: flex;
-  gap: 9px;
-  align-items: center;
-  padding: 10px 14px;
-  border-radius: 99px;
-  border: 1px solid #ffffff40;
-  background: #0c120bd9;
-  backdrop-filter: blur(15px);
-  color: #e9ece4;
-  font-size: 11px;
-  cursor: pointer;
-}
-.site-motion-toggle:focus-visible {
-  outline: 2px solid #d8b58c;
-  outline-offset: 5px;
-}
 .intro-line {
   animation: intro-reveal 1.3s cubic-bezier(0.16, 1, 0.3, 1) both;
   animation-delay: 0.18s;
@@ -721,10 +700,6 @@
   }
   .immersive-contact-title > span {
     font-size: 0.6em;
-  }
-  .site-motion-toggle {
-    right: 15px;
-    bottom: 15px;
   }
 }
 @media (max-width: 520px) {

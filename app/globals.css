@@ -145,12 +145,10 @@ body {
 .hero-stage h1{margin:65px 0 55px;text-shadow:0 2px 35px #0003;letter-spacing:-.085em;line-height:.85}
 .hero-stage .hero-bottom{margin-bottom:0;position:relative;text-shadow:0 1px 10px #000}
 .hero-stage .availability i{background:#dfff91;box-shadow:0 0 12px #c8ff79}
-.hero-stage a:focus-visible,.motion-control:focus-visible{outline:2px solid white;outline-offset:5px}
-.motion-control{position:absolute;right:32px;top:21px;display:flex;align-items:center;gap:9px;border:1px solid #ffffff65;padding:8px 11px;font:12px monospace;color:#fff;background:#1119;cursor:pointer;border-radius:0}
-.motion-control:hover{background:#111d;border-color:#fff}
+.hero-stage a:focus-visible{outline:2px solid white;outline-offset:5px}
 .hero-gallery{margin-top:0}
-@media(max-width:800px){.hero-stage{margin-left:-20px;margin-right:-20px;padding:25px 20px 30px;min-height:570px}.hero-stage .eyebrow{padding-right:130px;flex-direction:column;gap:7px;font-size:11px}.hero-stage h1{margin:70px 0}.motion-control{right:20px;top:22px;font-size:11px}}
-@media(max-width:520px){.hero-stage{min-height:560px;min-height:76svh;max-height:800px}.hero-stage h1{font-size:26vw;letter-spacing:-.085em;margin:85px 0}.hero-stage .eyebrow{font-size:10px;max-width:85%}.hero-stage .hero-bottom{align-items:end;gap:15px}.hero-stage .hero-bottom p{font-size:15px}.hero-stage .hero-bottom>a{font-size:11px;white-space:nowrap}.motion-control{font-size:10px;padding:8px}}
+@media(max-width:800px){.hero-stage{margin-left:-20px;margin-right:-20px;padding:25px 20px 30px;min-height:570px}.hero-stage .eyebrow{padding-right:130px;flex-direction:column;gap:7px;font-size:11px}.hero-stage h1{margin:70px 0}}
+@media(max-width:520px){.hero-stage{min-height:560px;min-height:76svh;max-height:800px}.hero-stage h1{font-size:26vw;letter-spacing:-.085em;margin:85px 0}.hero-stage .eyebrow{font-size:10px;max-width:85%}.hero-stage .hero-bottom{align-items:end;gap:15px}.hero-stage .hero-bottom p{font-size:15px}.hero-stage .hero-bottom>a{font-size:11px;white-space:nowrap}}
 .hero-name{min-width:0;overflow-wrap:anywhere;max-width:80%}.project-description,.about-copy p{white-space:pre-line}.hero-gallery:has(>a:only-child){grid-template-columns:minmax(0,500px);justify-content:center}.hero-gallery:has(>a:nth-child(2):last-child){grid-template-columns:repeat(2,minmax(0,1fr))}
 
 /* Keep tracking relative to the scaled name, rather than inheriting the

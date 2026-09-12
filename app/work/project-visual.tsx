@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import LiquidMetal from '@/app/liquid-metal';
 import { useSiteMotion } from '@/app/motion-frame';
 export default function ProjectVisual({
@@ -36,10 +36,6 @@ function LineVisual({
   const ref = useRef<HTMLCanvasElement>(null),
     pause = useRef(false),
     active = useRef(running);
-  const [paused, setPaused] = useState(false);
-  useEffect(() => {
-    pause.current = paused;
-  }, [paused]);
   useEffect(() => {
     active.current = running;
   }, [running]);
@@ -57,10 +53,8 @@ function LineVisual({
       needsDraw = true;
     const media = matchMedia('(prefers-reduced-motion: reduce)');
     pause.current = media.matches;
-    setPaused(media.matches);
     const preference = () => {
       pause.current = media.matches;
-      setPaused(media.matches);
     };
     const resize = () => {
       const box = canvas.getBoundingClientRect(),
@@ -148,14 +142,6 @@ function LineVisual({
   return (
     <>
       <canvas ref={ref} className="work-visual-canvas" aria-hidden="true" />
-      <button
-        className="motion-control"
-        aria-pressed={paused}
-        aria-label={paused ? 'Play animation' : 'Pause animation'}
-        onClick={() => setPaused(!paused)}
-      >
-        {paused ? '▷ Play motion' : 'Ⅱ Pause motion'}
-      </button>
     </>
   );
 }

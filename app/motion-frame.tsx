@@ -14,14 +14,11 @@ export function useSiteMotion() {
 export default function MotionFrame({
   children,
   enabled = true,
-  showControl = true,
 }: {
   children: ReactNode;
   enabled?: boolean;
-  showControl?: boolean;
 }) {
   const root = useRef<HTMLDivElement>(null),
-    [paused, setPaused] = useState(false),
     [reduced, setReduced] = useState(true);
   useEffect(() => {
     const media = matchMedia('(prefers-reduced-motion: reduce)');
@@ -30,7 +27,7 @@ export default function MotionFrame({
     media.addEventListener('change', update);
     return () => media.removeEventListener('change', update);
   }, []);
-  const running = enabled && !paused && !reduced;
+  const running = enabled && !reduced;
   useEffect(() => {
     const node = root.current;
     if (!node || !running) return;
@@ -95,19 +92,6 @@ export default function MotionFrame({
         className={`motion-root ${running ? 'motion-playing' : 'motion-paused'}`}
       >
         {children}
-        {showControl && enabled && !reduced && (
-          <button
-            className="site-motion-toggle"
-            aria-pressed={paused}
-            onClick={() => setPaused(!paused)}
-            aria-label={
-              paused ? 'Resume visual effects' : 'Pause visual effects'
-            }
-          >
-            <span aria-hidden="true">{paused ? '▷' : 'Ⅱ'}</span>
-            <span>{paused ? 'Resume motion' : 'Pause motion'}</span>
-          </button>
-        )}
       </div>
     </MotionContext.Provider>
   );

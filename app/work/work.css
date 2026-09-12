@@ -561,9 +561,6 @@ main.work-page .work-footer {
   background: #0d100f;
   color: #a6b0a3;
 }
-main.work-page .motion-control {
-  display: none;
-}
 .motion-paused main.work-page .work-star {
   animation-play-state: paused;
 }

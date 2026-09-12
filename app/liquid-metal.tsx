@@ -56,10 +56,8 @@ export default function LiquidMetal({settings={enabled:true,speed:1,color:0.53,t
   const settingsRef=useRef(settings);
   useEffect(()=>{settingsRef.current=settings},[settings]);
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const [paused, setPaused] = useState(false);
   const [available, setAvailable] = useState(false);
   const pausedRef = useRef(false);
-  useEffect(() => { pausedRef.current = paused; }, [paused]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -109,7 +107,6 @@ export default function LiquidMetal({settings={enabled:true,speed:1,color:0.53,t
     let lastDraw = 0;
     let lost = false;
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
-    setPaused(reduced.matches);
     pausedRef.current = reduced.matches;
     const draw = () => {
       if (lost) return;
@@ -136,7 +133,7 @@ export default function LiquidMetal({settings={enabled:true,speed:1,color:0.53,t
       }
       frame = requestAnimationFrame(tick);
     };
-    const preference = () => { setPaused(reduced.matches); pausedRef.current = reduced.matches; };
+    const preference = () => { pausedRef.current = reduced.matches; };
     const contextLost = (event: Event) => { event.preventDefault(); lost = true; setAvailable(false); };
     const resizeObserver = new ResizeObserver(resize);
     const intersection = new IntersectionObserver(([entry]) => { visible = entry.isIntersecting; });
@@ -161,6 +158,5 @@ export default function LiquidMetal({settings={enabled:true,speed:1,color:0.53,t
 
   return <>
     <div className="metal-surface" aria-hidden="true"><canvas ref={canvasRef} style={{opacity:available ? 1 : 0}} /></div>
-    {available && settings.enabled && <button className="motion-control" type="button" aria-label={paused ? 'Play background animation' : 'Pause background animation'} aria-pressed={paused} onClick={() => setPaused(!paused)}><span aria-hidden="true">{paused ? '▷' : 'Ⅱ'}</span> {paused ? 'Play motion' : 'Pause motion'}</button>}
   </>;
 }
