@@ -7,10 +7,6 @@
   PORTFOLIO_DEPLOY_TARGET = "netlify"
   NITRO_PRESET = "netlify"
 
-[[edge_functions]]
-  function = "media"
-  path = "/api/media/*"
-
 [[headers]]
   for = "/admin*"
   [headers.values]
