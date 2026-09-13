@@ -16,7 +16,7 @@
     "build:vercel": "PORTFOLIO_DEPLOY_TARGET=vercel NITRO_PRESET=vercel vite build",
     "sync:github": "node scripts/sync-github.mjs",
     "backup:content": "node scripts/backup-content.mjs",
-    "build:netlify": "PORTFOLIO_DEPLOY_TARGET=netlify NITRO_PRESET=netlify vite build",
+    "build:netlify": "PORTFOLIO_DEPLOY_TARGET=netlify NITRO_PRESET=netlify vite build && node scripts/build-netlify-media-routes.mjs",
     "dev:netlify": "PORTFOLIO_DEPLOY_TARGET=netlify vite --port 3001"
   },
   "dependencies": {
