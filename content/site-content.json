@@ -6,7 +6,7 @@
     "tagline": "Ideas into identities.\nThoughts into experiences.",
     "email": "Grandcanmakeit@outlook.com",
     "available": true,
-    "aboutTitle": "11111",
+    "aboutTitle": "About me",
     "aboutBody": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. I work at the intersection of visual identities and digital experiences, turning a little curiosity into something unexpected.",
     "aboutExtra": "我的技能:\n\n交互设计: 用户界面设计(网站,应用等), Human-centered design (HCD)\n用户研究与分析：用户数据分析、用户访谈、问卷调查、可用性测试、A/B 测试、用户画像构建、需求洞察、定性/定量研究​\n数据处理与可视化：数据分析、数据可视化\n\n",
     "services": [
@@ -19,7 +19,9 @@
       "enabled": true,
       "speed": 1,
       "color": 0.53,
-      "texture": 0.033
+      "texture": 0.033,
+      "baseImage": "/api/media/a25215e4-c3f4-4b14-bfaf-49d169e68abd",
+      "revealImage": "/api/media/a7a11b73-0d8a-4d57-9cc5-a803dcfd668b"
     },
     "resume": {
       "enabled": true,
@@ -72,8 +74,8 @@
           "id": "6e638114-4908-4c4d-ace2-eb775cd9f99f",
           "kind": "experience",
           "period": "2023.02-2023.06",
-          "title": "Medical Record Integration Project – Australian Department of Health, NSW Health, and the University of Sydney Faculty of Medicine",
-          "organization": "Researcher",
+          "title": "Medical Record Integration Project ",
+          "organization": "Australian Department of Health, NSW Health, and the University of Sydney Faculty of Medicine/Researcher",
           "description": "Data silos exist among Australia’s \"My Health Record\" system, GP records, and hospital medical record systems; frequent conflicts between information sharing and privacy protection have impacted the experience of over one million users and overall healthcare efficiency. I participated in a cross-institutional integration project, identifying system conflicts and clarifying stakeholder requirements to provide the data foundation for a compliant, tailored integration solution. I employed data mapping, cross-departmental meetings, and user research to facilitate conflict identification, ensure multi-perspective alignment, and accurately meet user needs. Leading a 10-person cross-disciplinary team, I mapped over 120 core data fields and organized more than 20 cross-departmental meetings, conducting research and validation across various institutional levels and user demographics.\n\nI distilled six key conflict points; the core insight was that inconsistent data formats and ambiguous privacy permission boundaries necessitated a balance between user convenience and privacy requirements. I helped design two alternative approaches and one comprehensive solution—incorporating data synchronization and privacy protection workflows—while conducting feasibility analyses and aligning stakeholder expectations. The solution framework passed milestone reviews and received endorsement from health authorities; three core resolution strategies were incorporated into the current implementation plan, laying the groundwork for data interoperability and helping the project achieve its interim goals.\n\n职责: 研究员\n澳大利亚My Health Record、GP 及医院病历系统存在数据孤岛，信息共享与隐私保护冲突频发，影响超100万用户体验及医疗效率。参与跨机构整合项目、识别系统冲突点、明确各方诉求，为合规适配的整合方案提供数据支撑。采用数据梳理、跨部门会议、用户调研法，分别支撑冲突定位、多视角兼顾与需求贴合。协同10人跨领域团队，梳理120余项核心数据字段，组织20余次跨部门会议，覆盖多层级机构及不同年龄段用户完成调研验。提炼6大核心冲突点，核心洞察为数据格式不统一、隐私权限界定模糊，需平衡用户便捷与隐私需求。参与设计2套备选思路及1含套数据同步、隐私保护流程的方案，完成可行性论证并协调各方对齐诉求。方案框架通过阶段性评审并获卫生部门认可，3项核心解决思路纳入当期推进计划，为数据互通奠定基础，助力项目达成阶段性目标。"
         },
         {
@@ -363,6 +365,6 @@
       }
     ]
   },
-  "version": 9,
-  "updatedAt": "2026-09-12T14:29:34.953Z"
+  "version": 14,
+  "updatedAt": "2026-09-13T04:16:21.155Z"
 }

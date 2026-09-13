@@ -1,18 +1,18 @@
 .work-page {
-  --work-accent: #494af1;
-  --work-ink: #ededff;
+  --work-accent: #526274;
+  --work-ink: #eef1ee;
 }
 .palette-copper {
-  --work-accent: #874833;
-  --work-ink: #ffe8dc;
+  --work-accent: #80675d;
+  --work-ink: #f5ebe3;
 }
 .palette-green {
-  --work-accent: #335d46;
-  --work-ink: #e1f5dc;
+  --work-accent: #526d68;
+  --work-ink: #e5f0eb;
 }
 .palette-mono {
-  --work-accent: #33363c;
-  --work-ink: #f1f1f0;
+  --work-accent: #536170;
+  --work-ink: #f1f3f1;
 }
 .work-page .nav {
   background: var(--background);
@@ -443,11 +443,47 @@
   }
 }
 
+/* Match case studies to the homepage's near-black neutral system. */
+main.work-page,
+main.work-page .work-footer {
+  --background: #08090b;
+  background: #08090b;
+  color: #eeeeeb;
+}
+main.work-page .work-cover-image,
+main.work-page .work-frame > div {
+  background: #15171b;
+}
+main.work-page .work-return,
+main.work-page .work-eyebrow,
+main.work-page .work-lead p,
+main.work-page .work-narrative p,
+main.work-page .work-overview,
+main.work-page .work-footer {
+  color: #a7a7a3;
+}
+main.work-page .work-meta,
+main.work-page .work-narrative article,
+main.work-page .work-gallery-heading {
+  border-color: #ffffff24;
+}
+main.work-page .work-return,
+main.work-page .work-eyebrow,
+main.work-page .work-lead p,
+main.work-page .work-narrative p,
+main.work-page .work-overview,
+main.work-page .work-meta dt,
+main.work-page .work-narrative article > span,
+main.work-page .work-frame figcaption,
+main.work-page .work-footer {
+  color: #ffffff;
+}
+
 /* Case studies share the public site's dark, spacious visual language. */
 main.work-page {
-  --background: #0d100f;
-  background: #0d100f;
-  color: #ecebe4;
+  --background: #0d1220;
+  background: #0d1220;
+  color: #eef1ee;
   max-width: none;
   font-family: 'Helvetica Neue', Arial, 'PingFang SC', sans-serif;
   overflow: clip;
@@ -471,13 +507,13 @@ main.work-page .nav nav {
   background: #ffffff08;
 }
 main.work-page .work-return {
-  color: #a6b0a3;
+  color: #a8b2b7;
 }
 main.work-page .work-intro {
   padding: 65px 5% 0;
 }
 main.work-page .work-eyebrow {
-  color: #a6b0a3;
+  color: #a8b2b7;
 }
 main.work-page .work-title-row {
   margin: 65px 0 40px;
@@ -492,7 +528,7 @@ main.work-page .work-lead {
 main.work-page .work-lead p,
 main.work-page .work-narrative p,
 main.work-page .work-overview {
-  color: #a6b0a3;
+  color: #a8b2b7;
 }
 main.work-page .work-meta,
 main.work-page .work-narrative article,
@@ -505,7 +541,7 @@ main.work-page .work-meta {
 main.work-page .work-meta dt,
 main.work-page .work-narrative article > span,
 main.work-page .work-frame figcaption {
-  color: #929e90;
+  color: #8f9eaa;
 }
 main.work-page .work-cover {
   margin: 0 5%;
@@ -514,14 +550,14 @@ main.work-page .work-cover {
 }
 main.work-page .work-cover-image,
 main.work-page .work-frame > div {
-  background: #1c241e;
+  background: #202a35;
   overflow: hidden;
 }
 main.work-page .work-cover-image img {
   transform: translateY(var(--drift, 0px));
 }
 main.work-page .work-visual-panel {
-  background: color-mix(in srgb, var(--work-accent) 70%, #0d100f);
+  background: color-mix(in srgb, var(--work-accent) 70%, #0d1220);
 }
 main.work-page .work-story {
   padding: 150px 7%;
@@ -547,7 +583,7 @@ main.work-page .work-gallery {
 main.work-page .work-end {
   margin: 0 5%;
   padding: 45px 4% 65px;
-  background: color-mix(in srgb, var(--work-accent) 55%, #0d100f);
+  background: color-mix(in srgb, var(--work-accent) 55%, #0d1220);
 }
 main.work-page .work-end .work-eyebrow {
   color: var(--work-ink);
@@ -558,8 +594,8 @@ main.work-page .work-next img {
 }
 main.work-page .work-footer {
   padding: 45px 5% 90px;
-  background: #0d100f;
-  color: #a6b0a3;
+  background: #090e18;
+  color: #a8b2b7;
 }
 .motion-paused main.work-page .work-star {
   animation-play-state: paused;
@@ -631,5 +667,117 @@ main.work-page .work-footer {
   }
   main.work-page .work-cover-image img {
     transform: none;
+  }
+}
+
+/* Final neutral surfaces for the detail-page header and footer. */
+main.work-page {
+  --background: #08090b;
+  background-color: #08090b;
+}
+main.work-page > .nav,
+main.work-page > .work-footer {
+  background: #08090b;
+  color: #eeeeeb;
+}
+main.work-page > .nav {
+  border-bottom-color: #ffffff24;
+}
+main.work-page > .work-footer {
+  border-top: 1px solid #ffffff24;
+}
+main.work-page > .work-end {
+  background: #101216;
+  color: #eeeeeb;
+}
+
+/* Project detail pages inherit the homepage's black grid and floating geometry. */
+main.work-page {
+  position: relative;
+  isolation: isolate;
+  background-color: #08090b;
+  background-image:
+    linear-gradient(#ffffff0b 1px, transparent 1px),
+    linear-gradient(90deg, #ffffff0b 1px, transparent 1px);
+  background-size: 96px 96px;
+}
+main.work-page > .about-geometry {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  pointer-events: none;
+}
+main.work-page > .nav,
+main.work-page > .work-intro,
+main.work-page > .work-cover,
+main.work-page > .work-story,
+main.work-page > .work-gallery-section,
+main.work-page > .work-end,
+main.work-page > .work-footer {
+  position: relative;
+  z-index: 1;
+}
+main.work-page .work-intro,
+main.work-page .work-story,
+main.work-page .work-gallery-section {
+  background: transparent;
+}
+main.work-page .work-title-row h1,
+main.work-page .work-section-heading h2,
+main.work-page .work-gallery-heading h2,
+main.work-page .work-next h2 {
+  color: transparent;
+  background:
+    linear-gradient(
+      115deg,
+      #737b83 0%,
+      #ffffff 18%,
+      #b8c0c7 34%,
+      #ffffff 50%,
+      #59626b 68%,
+      #e6eaed 84%,
+      #7f8992 100%
+    );
+  background-size: 240% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-shadow: 0 0 24px #dce2e62e;
+  animation: work-heading-metal 10s ease-in-out infinite alternate;
+}
+main.work-page .work-lead p,
+main.work-page .work-narrative p,
+main.work-page .work-overview,
+main.work-page .work-meta dd,
+main.work-page .work-frame figcaption {
+  color: #c5c9cd;
+}
+main.work-page .work-meta,
+main.work-page .work-narrative article,
+main.work-page .work-gallery-heading {
+  border-color: #ffffff35;
+}
+main.work-page .work-cover-image,
+main.work-page .work-frame > div {
+  background: #15171b;
+  border: 1px solid #ffffff24;
+}
+main.work-page .work-end {
+  background: #101216;
+  border: 1px solid #ffffff24;
+}
+@keyframes work-heading-metal {
+  from { background-position: 0% 50%; }
+  to { background-position: 100% 50%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  main.work-page .work-title-row h1,
+  main.work-page .work-section-heading h2,
+  main.work-page .work-gallery-heading h2,
+  main.work-page .work-next h2 {
+    animation: none;
+    background-position: 50% 50%;
   }
 }

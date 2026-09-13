@@ -13,6 +13,17 @@ export type ResumeImage = {
   layout: 'wide' | 'half';
 };
 export type ResumeLogo = { id: string; name: string; image: string };
+export type ResumeContact = {
+  enabled: boolean;
+  value: string;
+};
+export type ResumeSocial = {
+  id: string;
+  platform: 'instagram' | 'linkedin' | 'steam';
+  label: string;
+  url: string;
+  enabled: boolean;
+};
 export type Resume = {
   enabled: boolean;
   title: string;
@@ -22,6 +33,12 @@ export type Resume = {
   logos: ResumeLogo[];
   logoTitle: string;
   logoSpeed: number;
+  contacts: {
+    wechat: ResumeContact;
+    email: ResumeContact;
+    phone: ResumeContact;
+  };
+  socials: ResumeSocial[];
 };
 // Sample content is explicitly labelled; an existing portfolio needs no migration.
 export const defaultResume: Resume = {
@@ -60,6 +77,16 @@ export const defaultResume: Resume = {
   images: [],
   logoTitle: 'LOGO STUDIES / 示例标识',
   logoSpeed: 35,
+  contacts: {
+    wechat: { enabled: false, value: '' },
+    email: { enabled: true, value: 'Grandcanmakeit@outlook.com' },
+    phone: { enabled: false, value: '' },
+  },
+  socials: [
+    { id: 'social-instagram', platform: 'instagram', label: 'Instagram', url: '', enabled: false },
+    { id: 'social-linkedin', platform: 'linkedin', label: 'LinkedIn', url: '', enabled: false },
+    { id: 'social-steam', platform: 'steam', label: 'Steam', url: '', enabled: false },
+  ],
   logos: ['FORMA', 'STILL', 'MONO', 'FIELD', 'ARC', 'KIN'].map((name, i) => ({
     id: `logo-${i + 1}`,
     name,
@@ -113,12 +140,41 @@ export function validateResume(value: unknown): Resume {
   items(r.entries, 20);
   items(r.images, 6);
   items(r.logos, 20);
+  const contact = (value: unknown, enabledByDefault = false) => {
+    if (!value || typeof value !== 'object') return { enabled: enabledByDefault, value: '' };
+    const item = value as { enabled?: unknown; value?: unknown };
+    return {
+      enabled: item.enabled === true || (item.enabled === undefined && enabledByDefault),
+      value: text(typeof item.value === 'string' ? item.value : '', 200),
+    };
+  };
+  const socials = Array.isArray(r.socials) ? r.socials : defaultResume.socials;
   return {
     enabled: r.enabled,
     title: r.title,
     intro: r.intro,
     logoTitle: r.logoTitle,
     logoSpeed: r.logoSpeed,
+    contacts: {
+      wechat: contact(r.contacts?.wechat),
+      email: contact(r.contacts?.email, true),
+      phone: contact(r.contacts?.phone),
+    },
+    socials: socials.slice(0, 12).map((s, index) => {
+      if (!s || typeof s !== 'object') throw Error('社交平台配置无效');
+      const social = s as Partial<ResumeSocial>;
+      if (!['instagram', 'linkedin', 'steam'].includes(String(social.platform)))
+        throw Error('社交平台类型无效');
+      if (typeof social.id !== 'string' || !/^[a-zA-Z0-9-]{1,80}$/.test(social.id))
+        throw Error('社交平台编号无效');
+      return {
+        id: social.id,
+        platform: social.platform as ResumeSocial['platform'],
+        label: text(typeof social.label === 'string' ? social.label : `Social ${index + 1}`, 80, true),
+        url: text(typeof social.url === 'string' ? social.url : '', 500),
+        enabled: social.enabled === true,
+      };
+    }),
     entries: r.entries.map((e) => {
       if (!['experience', 'education', 'award'].includes(e.kind))
         throw Error('简历经历类型无效');

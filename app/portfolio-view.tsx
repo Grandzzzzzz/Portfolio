@@ -4,8 +4,22 @@ import type { Content } from '@/lib/content';
 import HeroVisual from './hero-visual';
 import MotionFrame from './motion-frame';
 import ResumeSection from './resume-section';
+import AboutGeometry from './about-geometry';
 import { defaultResume } from '@/lib/resume';
 import './immersive.css';
+
+function interactiveWords(text: string) {
+  return text.split(/(\s+)/).map((part, index) =>
+    /^\s+$/.test(part) ? (
+      part
+    ) : (
+      <span className="interactive-word" key={`${part}-${index}`}>
+        {part}
+      </span>
+    ),
+  );
+}
+
 export default function Portfolio({ content }: { content: Content }) {
   const works = content.projects;
   const aboutRef = useRef<HTMLElement>(null);
@@ -167,6 +181,15 @@ export default function Portfolio({ content }: { content: Content }) {
             );
           }}
         >
+          <AboutGeometry />
+          <div className="about-index-grid" aria-hidden="true">
+            <i />
+            <i />
+            <i />
+            <i />
+            <b />
+            <b />
+          </div>
           <span className="about-watermark" aria-hidden="true">
             PROCESS
           </span>
@@ -176,7 +199,7 @@ export default function Portfolio({ content }: { content: Content }) {
           </div>
           <div className="about-editorial-head" data-reveal>
             <span className="about-kicker">A WORKING METHOD</span>
-            <h2>{content.aboutTitle}</h2>
+            <h2>{interactiveWords(content.aboutTitle)}</h2>
             <span className="about-index">02—04</span>
           </div>
           <div className="immersive-about-copy" data-reveal>
@@ -184,8 +207,8 @@ export default function Portfolio({ content }: { content: Content }) {
               ✳
             </span>
             <div>
-              <p>{content.aboutBody}</p>
-              {content.aboutExtra && <p>{content.aboutExtra}</p>}
+              <p>{interactiveWords(content.aboutBody)}</p>
+              {content.aboutExtra && <p>{interactiveWords(content.aboutExtra)}</p>}
             </div>
           </div>
           <div className="immersive-services" aria-label="Services">
@@ -197,10 +220,15 @@ export default function Portfolio({ content }: { content: Content }) {
               </div>
             ))}
           </div>
+          <div className="about-system-note">
+            <span>[ METHOD / 04 ]</span>
+            <span>{interactiveWords('OBSERVE → EDIT → MAKE MEANING')}</span>
+          </div>
         </section>
         <ResumeSection
           resume={content.resume ?? defaultResume}
           name={content.name}
+          email={content.email}
         />
         <footer className="immersive-footer" id="contact">
           <div className="immersive-section-top" data-reveal>

@@ -11,7 +11,7 @@ import {
   SelectContent,
   SelectItem,
 } from '@/components/ui/select';
-import type { Resume, ResumeEntry } from '@/lib/resume';
+import type { Resume, ResumeEntry, ResumeSocial } from '@/lib/resume';
 
 type Props = {
   resume: Resume;
@@ -37,6 +37,10 @@ export default function ResumeEditor({
     patch({
       entries: r.entries.map((e) => (e.id === id ? { ...e, ...value } : e)),
     });
+  const contact = (key: keyof Resume['contacts'], value: Partial<Resume['contacts'][typeof key]>) =>
+    patch({ contacts: { ...r.contacts, [key]: { ...r.contacts[key], ...value } } });
+  const social = (id: string, value: Partial<ResumeSocial>) =>
+    patch({ socials: r.socials.map((item) => (item.id === id ? { ...item, ...value } : item)) });
   function reorder(
     key: 'entries' | 'images' | 'logos',
     i: number,
@@ -181,6 +185,48 @@ export default function ResumeEditor({
         <p className="cms-note">
           当前预置内容均为示例。替换为你的真实信息后，点击顶部“保存并应用”。移除条目也会在保存后生效。
         </p>
+      </section>
+      <section className="cms-card">
+        <h2>联系与社交平台</h2>
+        <p>这些内容会显示在首页左下角的个人信息卡片中，可分别控制显示或隐藏。</p>
+        <div className="cms-pair">
+          {(['wechat', 'email', 'phone'] as const).map((key) => {
+            const labels = { wechat: '微信', email: '邮箱', phone: '手机号' };
+            const ids = { wechat: 'contact-wechat', email: 'contact-email', phone: 'contact-phone' };
+            return (
+              <div className="cms-field" key={key}>
+                <label className="cms-toggle" htmlFor={ids[key]}>
+                  <span>{labels[key]} / 显示</span>
+                  <Switch id={ids[key]} checked={r.contacts[key].enabled} onCheckedChange={(enabled) => contact(key, { enabled })} />
+                </label>
+                <Input
+                  aria-label={`${labels[key]}内容`}
+                  placeholder={key === 'wechat' ? '微信号' : key === 'email' ? 'name@example.com' : '+61 ...'}
+                  value={r.contacts[key].value}
+                  maxLength={200}
+                  onChange={(event) => contact(key, { value: event.target.value })}
+                />
+              </div>
+            );
+          })}
+        </div>
+        <div className="cms-social-editor">
+          {r.socials.map((item) => (
+            <div className="cms-social-row" key={item.id}>
+              <label className="cms-toggle" htmlFor={`social-enabled-${item.id}`}>
+                <span>{item.label} / 显示</span>
+                <Switch id={`social-enabled-${item.id}`} checked={item.enabled} onCheckedChange={(enabled) => social(item.id, { enabled })} />
+              </label>
+              <Input
+                aria-label={`${item.label}链接`}
+                placeholder={`https://${item.platform}.com/...`}
+                value={item.url}
+                maxLength={500}
+                onChange={(event) => social(item.id, { url: event.target.value })}
+              />
+            </div>
+          ))}
+        </div>
       </section>
       <section className="cms-card">
         <div className="cms-row">

@@ -1,6 +1,6 @@
 .immersive-resume {
   padding: 95px 5% 100px;
-  background: #101512;
+  background: #121923;
   scroll-margin-top: 35px;
 }
 .resume-layout {
@@ -27,7 +27,7 @@
 .resume-introduction > p {
   font-size: 16px;
   line-height: 1.9;
-  color: #a4afa2;
+  color: #a8b2b7;
   white-space: pre-line;
   max-width: 450px;
   margin: 0;
@@ -39,9 +39,9 @@
   margin-top: 45px;
   padding: 28px;
   min-height: 220px;
-  border: 1px solid #d3b38b33;
+  border: 1px solid #dfff0033;
   background:
-    radial-gradient(ellipse at 90% 10%, #72826136, transparent 70%), #18201a;
+    radial-gradient(ellipse at 90% 10%, #71899f36, transparent 70%), #1b2531;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -51,7 +51,7 @@
   font:
     italic 70px/1 Georgia,
     serif;
-  color: #d3b38b;
+  color: #dfff00;
   letter-spacing: -0.09em;
 }
 .resume-identity > span:nth-child(2) {
@@ -63,8 +63,64 @@
   display: block;
   font-size: 9px;
   letter-spacing: 0.14em;
-  color: #9ca797;
+  color: #a8b2b7;
   margin-top: 12px;
+}
+.resume-contact-list {
+  display: grid;
+  gap: 7px;
+  margin-top: 20px;
+  position: relative;
+  z-index: 1;
+  font-size: 11px;
+  line-height: 1.4;
+  color: #c5c9cd;
+}
+.resume-contact-list a,
+.resume-contact-list span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow-wrap: anywhere;
+}
+.resume-contact-list b {
+  min-width: 30px;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 500;
+}
+.resume-contact-list svg {
+  width: 13px;
+  height: 13px;
+  flex: 0 0 auto;
+}
+.resume-social-list {
+  display: flex;
+  gap: 9px;
+  margin-top: 16px;
+  position: relative;
+  z-index: 1;
+}
+.resume-social-list a {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ffffff55;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: color 0.25s, border-color 0.25s, background 0.25s;
+}
+.resume-social-list a:hover,
+.resume-social-list a:focus-visible {
+  color: #08090b;
+  border-color: #ffffff;
+  background: #ffffff;
+  opacity: 1;
+}
+.resume-social-list svg {
+  width: 14px;
+  height: 14px;
 }
 .resume-orbit {
   position: absolute;
@@ -72,18 +128,18 @@
   height: 240px;
   right: -80px;
   top: -100px;
-  border: 1px solid #d3b38b40;
+  border: 1px solid #dfff0040;
   border-radius: 50%;
   box-shadow:
-    0 0 0 22px #d3b38b0a,
-    0 0 0 44px #d3b38b09,
-    0 0 0 66px #d3b38b08;
+    0 0 0 22px #dfff000a,
+    0 0 0 44px #dfff0009,
+    0 0 0 66px #dfff0008;
   transform: rotate(-25deg) scaleX(0.65);
   pointer-events: none;
 }
 .resume-timeline {
   min-width: 0;
-  border-left: 1px solid #d3b38b30;
+  border-left: 1px solid #dfff0030;
 }
 .resume-timeline:empty {
   display: none;
@@ -114,7 +170,7 @@
   height: 7px;
   border-radius: 50%;
   background: #d3b38b;
-  box-shadow: 0 0 0 7px #101512;
+  box-shadow: 0 0 0 7px #121923;
 }
 .resume-entry:after {
   content: '';
@@ -123,7 +179,7 @@
   top: 17px;
   width: 1px;
   height: calc(100% - 20px);
-  background: linear-gradient(#d3b38b99, #d3b38b00);
+  background: linear-gradient(#dfff0099, #dfff0000);
   transform-origin: top;
 }
 .motion-ready .resume-entry:after {
@@ -139,11 +195,11 @@
   justify-content: space-between;
   font-size: 10px;
   letter-spacing: 0.08em;
-  color: #a0ad9b;
+  color: #a8b2b7;
   line-height: 1.5;
 }
 .resume-entry-top > span:last-child {
-  color: #d3b38b;
+  color: #dfff00;
 }
 .resume-entry h3 {
   font-size: clamp(23px, 2.6vw, 38px);
@@ -155,14 +211,14 @@
 }
 .resume-organization {
   font-size: 14px;
-  color: #d0d6ca;
+  color: #dce3e7;
   margin: 0 0 20px;
   overflow-wrap: anywhere;
 }
 .resume-description {
   font-size: 15px;
   line-height: 1.9;
-  color: #96a392;
+  color: #9eabb4;
   white-space: pre-line;
   margin: 0 0 18px;
   overflow-wrap: anywhere;
@@ -171,7 +227,7 @@
   font:
     italic 15px Georgia,
     serif;
-  color: #778871;
+  color: #7f94a5;
 }
 .resume-photos {
   display: grid;
@@ -187,7 +243,7 @@
   grid-column: 1/-1;
 }
 .resume-photo > div {
-  background: #1c241e;
+  background: #202a35;
   padding: 26px;
   overflow: hidden;
   min-height: 220px;
@@ -211,7 +267,7 @@
   margin-top: 15px;
   font-size: 12px;
   line-height: 1.7;
-  color: #a4afa2;
+  color: #a8b2b7;
   white-space: pre-line;
   overflow-wrap: anywhere;
 }
@@ -231,7 +287,7 @@
   font-weight: 400;
   line-height: 1.6;
   letter-spacing: 0.12em;
-  color: #a4afa2;
+  color: #a8b2b7;
   margin: 0;
   overflow-wrap: anywhere;
 }
@@ -239,14 +295,14 @@
   border: 1px solid #ffffff26;
   border-radius: 50px;
   background: transparent;
-  color: #bbc7b5;
+  color: #c5d0d5;
   padding: 9px 14px;
   font-size: 10px;
   cursor: pointer;
   white-space: nowrap;
 }
 .resume-logos-heading button:focus-visible {
-  outline: 2px solid #d3b38b;
+  outline: 2px solid #dfff00;
   outline-offset: 4px;
 }
 .resume-logo-window {
@@ -298,7 +354,7 @@
   gap: 9px;
   font-size: 25px;
   letter-spacing: -0.04em;
-  color: #dce0d5;
+  color: #dce3e7;
   max-width: 100%;
   overflow-wrap: anywhere;
   line-height: 1.15;
@@ -307,7 +363,7 @@
   font:
     24px Georgia,
     serif;
-  color: #9cac90;
+  color: #9aabb8;
   flex-shrink: 0;
 }
 .wordmark-1 {
@@ -350,6 +406,152 @@
   }
   .immersive-nav nav a {
     padding-left: 16px;
+
+/* The journey moves sideways while the page keeps scrolling vertically. */
+.immersive-resume {
+  --journey-distance: 0px;
+  --journey-shift: 0px;
+  background: #111925;
+  color: #eef1ee;
+  overflow: clip;
+}
+.journey-stage {
+  position: relative;
+  height: calc(100svh + var(--journey-distance));
+  min-height: 720px;
+  overflow: visible;
+}
+.journey-stage .resume-layout {
+  display: flex;
+  align-items: stretch;
+  gap: clamp(55px, 8vw, 140px);
+  width: max-content;
+  height: 100svh;
+  min-height: 720px;
+  padding: 70px 5% 80px;
+  transform: translate3d(var(--journey-shift), 0, 0);
+  will-change: transform;
+}
+.journey-stage .resume-introduction {
+  flex: 0 0 clamp(320px, 34vw, 540px);
+  position: relative;
+  top: auto;
+  padding-top: 12px;
+}
+.journey-stage .resume-timeline {
+  display: flex;
+  align-items: stretch;
+  gap: 22px;
+  min-width: 0;
+  width: max-content;
+  border-left: 0;
+  padding-top: 46px;
+}
+.resume-timeline-label {
+  flex: 0 0 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px 0 30px;
+  border-top: 1px solid #a9b7c244;
+  border-bottom: 1px solid #a9b7c244;
+  color: #a9b7c2;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+}
+.resume-timeline-label span:last-child {
+  color: #dfff00;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+.journey-stage .resume-entry {
+  flex: 0 0 clamp(270px, 28vw, 430px);
+  display: flex;
+  flex-direction: column;
+  min-height: 58svh;
+  padding: 30px 28px 26px;
+  border: 1px solid #a9b7c244;
+  background: #1b2633;
+  box-shadow: inset 0 4px 0 #dfff00;
+}
+.journey-stage .resume-entry:before {
+  left: auto;
+  right: 25px;
+  top: 25px;
+  width: 8px;
+  height: 8px;
+  background: #dfff00;
+  box-shadow: 0 0 0 6px #1b2633;
+}
+.journey-stage .resume-entry:after {
+  display: none;
+}
+.journey-stage .resume-entry-top {
+  color: #a9b7c2;
+}
+.journey-stage .resume-entry-top > span:last-child {
+  color: #dfff00;
+}
+.journey-stage .resume-entry h3 {
+  margin-top: auto;
+  padding-top: 70px;
+  color: #eef1ee;
+}
+.journey-stage .resume-organization {
+  color: #d7c2b4;
+}
+.journey-stage .resume-description {
+  color: #a8b2b7;
+}
+.journey-stage .resume-entry-index {
+  color: #8299ab;
+  margin-top: 28px;
+}
+.journey-stage + .resume-photos,
+.journey-stage + .resume-logos {
+  position: relative;
+  z-index: 2;
+}
+@media (max-width: 700px) {
+  .immersive-resume {
+    overflow: hidden;
+  }
+  .journey-stage {
+    height: auto;
+    min-height: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    overscroll-behavior-x: contain;
+    scrollbar-width: thin;
+    scrollbar-color: #dfff00 #1b2633;
+  }
+  .journey-stage .resume-layout {
+    height: auto;
+    min-height: 0;
+    padding: 35px 24px 65px;
+    gap: 35px;
+    transform: none;
+  }
+  .journey-stage .resume-introduction {
+    flex-basis: min(78vw, 360px);
+  }
+  .journey-stage .resume-timeline {
+    padding-top: 25px;
+  }
+  .resume-timeline-label {
+    flex-basis: 110px;
+  }
+  .journey-stage .resume-entry {
+    flex-basis: min(72vw, 320px);
+    min-height: 430px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .journey-stage .resume-layout {
+    transform: none;
+    will-change: auto;
+  }
+}
     padding-right: 16px;
   }
 }
@@ -465,6 +667,167 @@
   .motion-ready .resume-entry:after {
     transform: none;
     transition: none;
+  }
+}
+
+/* Lumen-inspired archive layer, scoped to The journey only. */
+.immersive-resume {
+  background: #000;
+  color: #fff;
+}
+.journey-index-grid {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+.journey-index-grid i {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: #afddff0d;
+  transform-origin: top;
+  animation: lumen-grid-v 1.25s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.journey-index-grid i:nth-child(1) { left: 25%; }
+.journey-index-grid i:nth-child(2) { left: 50%; animation-delay: 0.15s; }
+.journey-index-grid i:nth-child(3) { left: 75%; animation-delay: 0.3s; }
+.journey-index-grid b {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #afddff0d;
+  transform-origin: left;
+  animation: lumen-grid-h 1.25s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.journey-index-grid b:nth-child(4) { top: 28%; animation-delay: 0.45s; }
+.journey-index-grid b:nth-child(5) { top: 58%; animation-delay: 0.6s; }
+.journey-index-grid b:nth-child(6) { top: 84%; animation-delay: 0.75s; }
+.journey-watermark {
+  position: absolute;
+  top: 11%;
+  right: -4%;
+  z-index: 0;
+  color: #afddff10;
+  font-size: clamp(100px, 20vw, 330px);
+  font-weight: 500;
+  letter-spacing: -0.12em;
+  line-height: 0.8;
+  transform: rotate(-8deg);
+  pointer-events: none;
+}
+.immersive-resume > *:not(.journey-index-grid):not(.journey-watermark) {
+  position: relative;
+  z-index: 1;
+}
+.immersive-resume .immersive-section-top,
+.immersive-resume .section-number,
+.immersive-resume .resume-kicker {
+  color: #afddffb8;
+}
+.immersive-resume .immersive-section-top {
+  border-color: #afddff2e;
+}
+.resume-layout {
+  grid-template-columns: minmax(280px, 0.8fr) minmax(0, 1.5fr);
+  gap: 8%;
+}
+.resume-introduction h2 {
+  color: #fff;
+  text-shadow: 0 0 45px #afddff14;
+}
+.resume-introduction > p,
+.resume-description {
+  color: #ffffff80;
+}
+.resume-identity {
+  border-color: #afddff5c;
+  background: #05090b;
+  box-shadow: 10px 10px 0 #afddff0d;
+}
+.resume-identity-mark,
+.resume-identity small {
+  color: #afddff;
+}
+.resume-orbit {
+  border-color: #afddff66;
+  box-shadow: 0 0 0 22px #afddff0b, 0 0 0 44px #afddff08;
+  animation: journey-orbit 12s linear infinite;
+}
+.resume-timeline {
+  position: relative;
+}
+.resume-timeline-label {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin: 0 0 14px;
+  color: #afddff9c;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+}
+.resume-entry {
+  border-color: #ffffff33;
+  background: #050708cc;
+  box-shadow: 0 0 0 1px transparent;
+}
+.resume-entry:hover {
+  background: #afddff0c;
+  border-color: #afddffa6;
+  box-shadow: 0 0 32px #afddff14;
+}
+.resume-entry-top,
+.resume-entry-top > span:last-child,
+.resume-entry-index,
+.resume-entry-index:before {
+  color: #afddffa8;
+}
+.resume-entry:before {
+  background: #afddff;
+  box-shadow: 0 0 0 6px #000, 0 0 24px #afddffff;
+}
+.resume-organization {
+  color: #fff;
+}
+.resume-photos {
+  border-top: 1px solid #afddff2e;
+  padding-top: 24px;
+}
+.resume-photo > div {
+  background: #05090b;
+  border-color: #afddff45;
+}
+.resume-logos {
+  border-color: #afddff45;
+}
+.resume-logos-heading h3,
+.resume-wordmark,
+.resume-wordmark i {
+  color: #afddff;
+}
+@keyframes journey-orbit { to { rotate: 360deg; } }
+@media (max-width: 700px) {
+  .resume-timeline-label {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .journey-watermark {
+    top: 19%;
+    font-size: 30vw;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-index-grid i,
+  .about-index-grid b,
+  .about-index-grid::before,
+  .about-index-grid::after,
+  .journey-index-grid i,
+  .journey-index-grid b,
+  .resume-orbit {
+    animation: none;
   }
 }
 
@@ -665,5 +1028,430 @@
   .resume-photo > div {
     transition: none;
     transform: none;
+  }
+}
+
+/* Final Journey layout: a pinned horizontal archive driven by vertical scroll. */
+.immersive-resume {
+  --journey-distance: 0px;
+  --journey-shift: 0px;
+  overflow: clip;
+  background: #111925;
+  color: #eef1ee;
+}
+.immersive-resume .journey-stage {
+  position: relative;
+  height: calc(100svh + var(--journey-distance));
+  min-height: 720px;
+  overflow: visible;
+}
+.immersive-resume .journey-stage > .resume-layout {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: stretch;
+  gap: clamp(55px, 8vw, 140px);
+  width: max-content;
+  height: 100svh;
+  min-height: 720px;
+  padding: 70px 5% 80px;
+  transform: translate3d(var(--journey-shift), 0, 0);
+  will-change: transform;
+}
+.immersive-resume .journey-stage .resume-introduction {
+  flex: 0 0 clamp(320px, 34vw, 540px);
+  position: relative;
+  top: auto;
+  padding-top: 12px;
+}
+.immersive-resume .journey-stage .resume-timeline {
+  display: flex;
+  align-items: stretch;
+  gap: 22px;
+  width: max-content;
+  min-width: 0;
+  padding-top: 46px;
+  border-left: 0;
+}
+.immersive-resume .journey-stage .resume-timeline-label {
+  flex: 0 0 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px 0 30px;
+  margin: 0;
+  border-top: 1px solid #a9b7c244;
+  border-bottom: 1px solid #a9b7c244;
+  color: #a9b7c2;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+}
+.immersive-resume .journey-stage .resume-timeline-label span:last-child {
+  color: #c7b8a3;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+.immersive-resume .journey-stage .resume-entry {
+  flex: 0 0 clamp(430px, 42vw, 560px);
+  display: flex;
+  flex-direction: column;
+  height: min(650px, calc(100svh - 150px));
+  min-height: 0;
+  overflow: hidden;
+  margin: 0;
+  padding: 30px 28px 26px;
+  border: 1px solid #a9b7c244;
+  background: #1b2633;
+  box-shadow: inset 0 4px 0 #c7b8a3;
+}
+.immersive-resume .journey-stage .resume-entry:hover {
+  transform: translateY(-8px);
+  background: #233344;
+  border-color: #c7b8a3a8;
+  box-shadow: inset 0 4px 0 #c7b8a3, 0 0 28px #c7b8a314;
+}
+.immersive-resume .journey-stage .resume-entry h3 {
+  margin-top: 40px;
+  padding-top: 0;
+  max-height: none;
+  overflow: visible;
+  overflow-wrap: anywhere;
+  font-size: clamp(24px, 2.6vw, 36px);
+  line-height: 1.15;
+}
+.immersive-resume .journey-stage .resume-entry .resume-description {
+  flex: 1 1 auto;
+  min-height: 0;
+  max-height: none;
+  margin-bottom: 0;
+}
+.immersive-resume .journey-stage .resume-entry:before {
+  left: auto;
+  right: 25px;
+  top: 25px;
+  width: 8px;
+  height: 8px;
+  background: #c7b8a3;
+  box-shadow: 0 0 0 6px #1b2633, 0 0 20px #c7b8a3aa;
+}
+.immersive-resume .journey-stage .resume-entry:after {
+  display: none;
+}
+.immersive-resume .journey-stage .resume-entry-top {
+  padding-right: 25px;
+  color: #a9b7c2;
+}
+.immersive-resume .journey-stage .resume-entry-top > span:last-child {
+  color: #c7b8a3;
+}
+.immersive-resume .journey-stage .resume-entry h3 {
+  max-width: none;
+  margin-top: auto;
+  padding-top: 70px;
+  color: #eef1ee;
+}
+.immersive-resume .journey-stage .resume-organization {
+  color: #d7c2b4;
+}
+.immersive-resume .journey-stage .resume-description {
+  color: #a8b2b7;
+  max-height: 230px;
+  overflow: auto;
+  padding-right: 10px;
+  scrollbar-width: thin;
+  scrollbar-color: #6e7884 transparent;
+}
+.immersive-resume .journey-stage .resume-entry-index {
+  color: #8299ab;
+}
+@media (max-width: 700px) {
+  .immersive-resume {
+    overflow: hidden;
+  }
+  .immersive-resume .journey-stage {
+    height: auto;
+    min-height: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    overscroll-behavior-x: contain;
+    scrollbar-width: thin;
+    scrollbar-color: #dfff00 #1b2633;
+  }
+  .immersive-resume .journey-stage > .resume-layout {
+    position: relative;
+    top: auto;
+    height: auto;
+    min-height: 0;
+    padding: 35px 24px 65px;
+    transform: none;
+    will-change: auto;
+  }
+  .immersive-resume .journey-stage .resume-introduction {
+    flex-basis: min(78vw, 360px);
+  }
+  .immersive-resume .journey-stage .resume-timeline {
+    padding-top: 25px;
+  }
+  .immersive-resume .journey-stage .resume-entry {
+    flex-basis: min(84vw, 380px);
+    height: 520px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .immersive-resume .journey-stage > .resume-layout {
+    transform: none;
+    will-change: auto;
+  }
+}
+
+/* Keep the archive quiet and legible while preserving the horizontal motion. */
+.immersive-resume,
+.immersive-resume .journey-stage .resume-entry {
+  background: #08090b;
+}
+.immersive-resume .journey-stage .resume-entry {
+  border-color: #ffffff24;
+  box-shadow: inset 0 3px 0 #c7b8a3;
+}
+.immersive-resume .journey-stage .resume-entry:hover {
+  background: #15171b;
+  border-color: #c7b8a388;
+  box-shadow: inset 0 3px 0 #c7b8a3, 0 0 24px #ffffff0c;
+}
+.immersive-resume .journey-stage .resume-entry:before,
+.immersive-resume .journey-stage .resume-timeline-label span:last-child,
+.immersive-resume .journey-stage .resume-entry-top > span:last-child {
+  color: #c7b8a3;
+}
+.immersive-resume .journey-stage .resume-entry:before {
+  background: #c7b8a3;
+  box-shadow: 0 0 0 6px #08090b, 0 0 16px #c7b8a355;
+}
+.immersive-resume .resume-identity {
+  border-color: #ffffff24;
+  background: #15171b;
+  box-shadow: 10px 10px 0 #ffffff08;
+}
+.immersive-resume .resume-identity-mark,
+.immersive-resume .resume-identity small,
+.immersive-resume .resume-orbit {
+  color: #c7b8a3;
+  border-color: #c7b8a355;
+}
+.immersive-resume .resume-orbit {
+  box-shadow: 0 0 0 22px #c7b8a30a, 0 0 0 44px #c7b8a306;
+}
+.immersive-resume .resume-entry-description,
+.immersive-resume .resume-kicker,
+.immersive-resume .immersive-section-top,
+.immersive-resume .section-number {
+  color: #a7a7a3;
+}
+.immersive-resume .resume-description {
+  scrollbar-color: #5f6268 transparent;
+}
+
+/* Neutralize the remaining blue text tones. */
+.immersive-resume .journey-stage .resume-timeline-label,
+.immersive-resume .journey-stage .resume-entry-top,
+.immersive-resume .journey-stage .resume-description,
+.immersive-resume .journey-stage .resume-entry-index,
+.immersive-resume .resume-description,
+.immersive-resume .resume-entry-index,
+.immersive-resume .resume-logos-heading h3,
+.immersive-resume .resume-wordmark i {
+  color: #ffffff;
+}
+
+/* Story and card labels share the same silver fluid-metal pointer highlight. */
+.immersive-resume .interactive-word {
+  display: inline-block;
+  color: inherit;
+  transition:
+    color 0.35s ease,
+    text-shadow 0.35s ease,
+    transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.immersive-resume .interactive-word:hover,
+.immersive-resume .interactive-word:focus-visible {
+  color: transparent;
+  background:
+    linear-gradient(
+      115deg,
+      #555d66 0%,
+      #ffffff 16%,
+      #b9c1c8 30%,
+      #ffffff 48%,
+      #3f4750 64%,
+      #ffffff 83%,
+      #8f99a2 100%
+    );
+  background-size: 220% 220%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-shadow:
+    0 0 38px #dce2e678,
+    0 0 12px #ffffff88;
+  transform: translateY(-2px);
+  animation: journey-word-metal 3s ease-in-out infinite alternate;
+}
+@keyframes journey-word-metal {
+  from { background-position: 0% 50%; }
+  to { background-position: 100% 50%; }
+}
+
+/* White card frames and a slow, shifting silver top edge. */
+.immersive-resume .journey-stage .resume-entry {
+  border: 1px solid #ffffff;
+  box-shadow: 0 0 0 1px #ffffff18;
+}
+.immersive-resume .journey-stage .resume-entry:hover,
+.immersive-resume .journey-stage .resume-entry:focus-within {
+  border-color: #ffffff;
+  box-shadow: 0 0 0 1px #ffffff55, 0 0 26px #ffffff18;
+}
+.immersive-resume .journey-stage .resume-entry::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background:
+    linear-gradient(
+      105deg,
+      #ffffff 0%,
+      #5f6871 18%,
+      #f8fafb 35%,
+      #8d969e 52%,
+      #ffffff 70%,
+      #4b545d 86%,
+      #ffffff 100%
+    );
+  background-size: 260% 100%;
+  animation: journey-card-metal 11s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+@keyframes journey-card-metal {
+  from { background-position: 0% 50%; }
+  to { background-position: 100% 50%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .immersive-resume .interactive-word:hover,
+  .immersive-resume .interactive-word:focus-visible,
+  .immersive-resume .journey-stage .resume-entry::after {
+    animation: none;
+  }
+}
+.immersive-resume .journey-stage .resume-entry-top > span:last-child,
+.immersive-resume .journey-stage .resume-timeline-label span:last-child {
+  color: #ffffff;
+}
+
+/* Extend the white blurred geometry field behind The story so far. */
+.immersive-resume > .about-geometry.about-geometry {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.62;
+  pointer-events: none;
+}
+.immersive-resume {
+  isolation: isolate;
+}
+.immersive-resume > .journey-content.journey-content {
+  position: relative;
+  z-index: 2;
+}
+.immersive-resume .journey-stage .resume-entry-top > span:last-child,
+.immersive-resume .journey-stage .resume-organization,
+.immersive-resume .resume-identity-mark,
+.immersive-resume .resume-identity small,
+.immersive-resume .resume-entry-index {
+  color: #dce2e6;
+}
+.immersive-resume .journey-stage .resume-entry-top > span:last-child,
+.immersive-resume .journey-stage .resume-organization {
+  color: #ffffff;
+}
+.immersive-resume .journey-stage .resume-description {
+  color: #c5c9cd;
+}
+
+/* Card status dots breathe through a vivid green halo. */
+.immersive-resume .journey-stage .resume-entry::before {
+  background: #52e879;
+  box-shadow:
+    0 0 0 6px #08090b,
+    0 0 14px #52e879aa,
+    0 0 36px #52e879cc,
+    0 0 64px #52e87966;
+  animation: journey-status-breathe 4s ease-in-out infinite;
+}
+@keyframes journey-status-breathe {
+  0%,
+  100% {
+    background: #269b4e;
+    box-shadow:
+      0 0 0 6px #08090b,
+      0 0 10px #269b4e99,
+      0 0 30px #269b4ecc,
+      0 0 52px #269b4e55;
+    transform: scale(0.9);
+  }
+  50% {
+    background: #8aff9f;
+    box-shadow:
+      0 0 0 6px #08090b,
+      0 0 18px #8aff9fcc,
+      0 0 44px #8aff9fff,
+      0 0 78px #52e879aa;
+    transform: scale(1.35);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .immersive-resume .journey-stage .resume-entry::before {
+    animation: none;
+    background: #52e879;
+    box-shadow:
+      0 0 0 6px #08090b,
+      0 0 16px #52e879aa,
+      0 0 42px #52e879dd,
+      0 0 70px #52e87977;
+    transform: none;
+  }
+}
+
+/* Separate card titles from the white body copy with a restrained silver flow. */
+.immersive-resume .journey-stage .resume-entry h3 {
+  color: transparent;
+  background:
+    linear-gradient(
+      115deg,
+      #737b83 0%,
+      #ffffff 18%,
+      #b8c0c7 34%,
+      #ffffff 50%,
+      #59626b 68%,
+      #e6eaed 84%,
+      #7f8992 100%
+    );
+  background-size: 240% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-shadow: 0 0 20px #dce2e62e;
+  animation: journey-card-title-metal 9s ease-in-out infinite alternate;
+}
+@keyframes journey-card-title-metal {
+  from { background-position: 0% 50%; }
+  to { background-position: 100% 50%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .immersive-resume .journey-stage .resume-entry h3 {
+    animation: none;
+    background-position: 50% 50%;
   }
 }

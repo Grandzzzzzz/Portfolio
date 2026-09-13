@@ -1,6 +1,6 @@
 import 'server-only';
 import { env } from 'cloudflare:workers';
-import { defaultContent, type Content } from '@/lib/content';
+import { defaultContent, type Content, validateContent } from '@/lib/content';
 export function bindings() {
   return env as unknown as {
     DB: D1Database;
@@ -20,11 +20,11 @@ export async function readContent() {
     .first<{ content: string; version: number; updated_at: string }>();
   return row
     ? {
-        content: JSON.parse(row.content) as Content,
+        content: validateContent(JSON.parse(row.content)),
         version: row.version,
         updatedAt: row.updated_at,
       }
-    : { content: defaultContent, version: 0, updatedAt: null };
+    : { content: validateContent(defaultContent), version: 0, updatedAt: null };
 }
 
 export async function writeContent(content:Content,version:number){

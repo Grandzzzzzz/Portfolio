@@ -1,15 +1,85 @@
 'use client';
-import { type CSSProperties } from 'react';
+import { useEffect, useRef, type CSSProperties } from 'react';
 import { type Resume, resumeKinds } from '@/lib/resume';
+import AboutGeometry from './about-geometry';
 import './resume.css';
+import { Briefcase, Camera, Gamepad2, Mail, Phone } from 'lucide-react';
+
+function interactiveResumeText(text: string) {
+  return text.split(/(\s+)/).map((part, index) =>
+    /^\s+$/.test(part) ? (
+      part
+    ) : (
+      <span className="interactive-word" key={`${part}-${index}`}>
+        {part}
+      </span>
+    ),
+  );
+}
+
+const socialIcons = {
+  instagram: Camera,
+  linkedin: Briefcase,
+  steam: Gamepad2,
+};
 
 export default function ResumeSection({
   resume,
   name,
+  email,
 }: {
   resume: Resume;
   name: string;
+  email: string;
 }) {
+  const journeyStageRef = useRef<HTMLDivElement>(null);
+  const journeyTrackRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const stage = journeyStageRef.current;
+    const track = journeyTrackRef.current;
+    if (!stage || !track) return;
+    const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+    let frame = 0;
+
+    const measure = () => {
+      const distance = Math.max(track.scrollWidth - window.innerWidth, 0);
+      stage.style.setProperty('--journey-distance', `${distance}px`);
+      return distance;
+    };
+    const update = () => {
+      frame = 0;
+      const distance = measure();
+      if (reducedMotion.matches || distance === 0) {
+        track.style.setProperty('--journey-shift', '0px');
+        return;
+      }
+      const rect = stage.getBoundingClientRect();
+      const progress = Math.max(
+        0,
+        Math.min(1, -rect.top / Math.max(stage.offsetHeight - innerHeight, 1)),
+      );
+      track.style.setProperty(
+        '--journey-shift',
+        `${-distance * progress}px`,
+      );
+    };
+    const schedule = () => {
+      if (!frame) frame = requestAnimationFrame(update);
+    };
+
+    window.addEventListener('scroll', schedule, { passive: true });
+    window.addEventListener('resize', schedule);
+    reducedMotion.addEventListener('change', schedule);
+    schedule();
+    return () => {
+      cancelAnimationFrame(frame);
+      window.removeEventListener('scroll', schedule);
+      window.removeEventListener('resize', schedule);
+      reducedMotion.removeEventListener('change', schedule);
+    };
+  }, []);
+
   if (!resume.enabled) return null;
   return (
     <section
@@ -17,15 +87,27 @@ export default function ResumeSection({
       id="resume"
       aria-labelledby="resume-title"
     >
+      <AboutGeometry />
+      <div className="journey-content">
+      <div className="journey-index-grid" aria-hidden="true">
+        <i />
+        <i />
+        <i />
+        <b />
+        <b />
+        <b />
+      </div>
+      <span className="journey-watermark" aria-hidden="true">TRACE</span>
       <div className="immersive-section-top" data-reveal>
         <span><b className="section-number">03</b> / THE JOURNEY</span>
         <span>EXPERIENCE · EDUCATION · EXPLORATION</span>
       </div>
-      <div className="resume-layout">
-        <div className="resume-introduction">
+      <div className="journey-stage" ref={journeyStageRef}>
+        <div className="resume-layout" ref={journeyTrackRef}>
+          <div className="resume-introduction">
           <span className="resume-kicker">A FIELD GUIDE TO THE WORK</span>
           <h2 id="resume-title" data-reveal>
-            {resume.title}
+            {interactiveResumeText(resume.title)}
           </h2>
           <p data-reveal>{resume.intro}</p>
           <div className="resume-identity" data-reveal>
@@ -40,28 +122,54 @@ export default function ResumeSection({
               {name}
               <small>A LITTLE MORE ABOUT ME ↘</small>
             </span>
+            <div className="resume-contact-list">
+              {resume.contacts.wechat.enabled && resume.contacts.wechat.value && (
+                <span><b>微信</b>{resume.contacts.wechat.value}</span>
+              )}
+              {resume.contacts.email.enabled && (resume.contacts.email.value || email) && (
+                <a href={`mailto:${resume.contacts.email.value || email}`}><Mail aria-hidden="true" />{resume.contacts.email.value || email}</a>
+              )}
+              {resume.contacts.phone.enabled && resume.contacts.phone.value && (
+                <a href={`tel:${resume.contacts.phone.value}`}><Phone aria-hidden="true" />{resume.contacts.phone.value}</a>
+              )}
+            </div>
+            {resume.socials.some((social) => social.enabled && social.url) && (
+              <div className="resume-social-list" aria-label="Social links">
+                {resume.socials.filter((social) => social.enabled && social.url).map((social) => {
+                  const Icon = socialIcons[social.platform];
+                  return <a key={social.id} href={social.url} target="_blank" rel="noreferrer" aria-label={social.label} title={social.label}><Icon aria-hidden="true" /></a>;
+                })}
+              </div>
+            )}
             <span className="resume-orbit" aria-hidden="true" />
           </div>
-        </div>
-        <div className="resume-timeline">
-          {resume.entries.map((entry, i) => (
-            <article className={`resume-entry resume-entry-${entry.kind}`} key={entry.id} data-reveal>
-              <div className="resume-entry-top">
-                <span>{entry.period}</span>
-                <span>{resumeKinds[entry.kind]}</span>
-              </div>
-              <h3>{entry.title}</h3>
-              {entry.organization && (
-                <p className="resume-organization">{entry.organization}</p>
-              )}
-              {entry.description && (
-                <p className="resume-description">{entry.description}</p>
-              )}
-              <span className="resume-entry-index" aria-hidden="true">
-                {String(i + 1).padStart(2, '0')}
-              </span>
-            </article>
-          ))}
+          </div>
+          <div className="resume-timeline">
+            <div className="resume-timeline-label" aria-hidden="true">
+              <span>LIVE ARCHIVE</span>
+              <span>SCROLL TO TRACE THE PATH</span>
+            </div>
+            {resume.entries.map((entry, i) => (
+              <article className={`resume-entry resume-entry-${entry.kind}`} key={entry.id} data-reveal>
+                <div className="resume-entry-top">
+                  <span>{entry.period}</span>
+                  <span>{interactiveResumeText(resumeKinds[entry.kind])}</span>
+                </div>
+                <h3>{entry.title}</h3>
+                {entry.organization && (
+                  <p className="resume-organization">
+                    {interactiveResumeText(entry.organization)}
+                  </p>
+                )}
+                {entry.description && (
+                  <p className="resume-description">{entry.description}</p>
+                )}
+                <span className="resume-entry-index" aria-hidden="true">
+                  {String(i + 1).padStart(2, '0')}
+                </span>
+              </article>
+            ))}
+          </div>
         </div>
       </div>
       {resume.images.length > 0 && (
@@ -130,6 +238,7 @@ export default function ResumeSection({
           </div>
         </div>
       )}
+      </div>
     </section>
   );
 }

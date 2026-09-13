@@ -1,7 +1,7 @@
 import 'server-only';
 import { mkdir, readFile, unlink, writeFile } from 'node:fs/promises';
 import path from 'node:path';
-import { defaultContent, type Content } from '@/lib/content';
+import { defaultContent, type Content, validateContent } from '@/lib/content';
 
 type Snapshot = { content: Content; version: number; updatedAt: string | null };
 type MediaObject = {
@@ -67,7 +67,8 @@ export function bindings() {
 }
 
 export async function readContent() {
-  return readSnapshot();
+  const snapshot = await readSnapshot();
+  return { ...snapshot, content: validateContent(snapshot.content) };
 }
 
 export async function writeContent(content: Content, version: number): Promise<Snapshot | null> {

@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import { readContent } from '@/db';
 import { getDetails, resolveStyle } from '@/lib/project-details';
 import ProjectVisual from '../project-visual';
+import AboutGeometry from '@/app/about-geometry';
 import MotionFrame from '@/app/motion-frame';
 import '@/app/immersive.css';
 import '../work.css';
@@ -31,6 +32,7 @@ export default async function Work({ params }: Props) {
   return (
     <MotionFrame enabled={content.hero.enabled}>
       <main className={`work-page palette-${style.palette}`} id="top">
+        <AboutGeometry />
         <header className="nav">
           <a href="/" className="logo">
             {content.name}

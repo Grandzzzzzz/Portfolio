@@ -2,7 +2,7 @@ import 'server-only';
 import contentSnapshot from '../content/site-content.json';
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
-import { type Content } from '@/lib/content';
+import { type Content, validateContent } from '@/lib/content';
 
 type Snapshot = { content: Content; version: number; updatedAt: string | null };
 type MediaObject = {
@@ -14,7 +14,8 @@ type MediaObject = {
 };
 
 const media = new Map<string, { bytes: Uint8Array; contentType: string }>();
-const snapshot: Snapshot = contentSnapshot as Snapshot;
+const rawSnapshot = contentSnapshot as Snapshot;
+const snapshot: Snapshot = { ...rawSnapshot, content: validateContent(rawSnapshot.content) };
 const uploadsPath = path.join(process.cwd(), 'public', 'uploads');
 
 export function bindings() {

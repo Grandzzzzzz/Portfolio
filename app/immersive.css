@@ -618,6 +618,72 @@
 .hero-location {
   animation-delay: 0.6s;
 }
+
+/* Extend the hero's navy, chrome, and lime palette through the public sections. */
+.immersive-home {
+  --surface-deep: #0d1220;
+  --surface: #171d26;
+  --surface-raised: #202a35;
+  --ink: #eef1ee;
+  --muted-ink: #a8b2b7;
+  --accent: #dfff00;
+  --hairline: #ffffff26;
+}
+.immersive-works {
+  background: var(--surface-deep);
+}
+.immersive-section-title em,
+.immersive-contact-title em {
+  color: #d7c2b4;
+}
+.immersive-project-media {
+  background: var(--surface-raised);
+}
+.project-open {
+  background: #0d1220e0;
+}
+.immersive-project-description {
+  color: #a8b2b7;
+}
+.immersive-about {
+  background: var(--surface);
+}
+.immersive-about::before {
+  background: repeating-linear-gradient(
+    118deg,
+    transparent 0 18px,
+    #b6c5d01a 19px 20px
+  );
+}
+.about-watermark {
+  color: #c5d1db1a;
+}
+.about-asterisk {
+  color: #8799aa;
+}
+.immersive-about:hover .about-asterisk {
+  color: var(--accent);
+}
+.immersive-about-copy p + p,
+.immersive-services span {
+  color: #a8b2b7;
+}
+.immersive-services > div:hover {
+  color: #eef1ee;
+  border-color: #dfff0088;
+}
+.immersive-services > div:hover > span:last-child {
+  color: var(--accent);
+}
+.immersive-footer {
+  background: #090e18;
+}
+.immersive-contact-title em {
+  color: #d7c2b4;
+}
+.immersive-footer-bottom {
+  color: #a8b2b7;
+}
 .hero-discover {
   animation-delay: 0.75s;
 }
@@ -1027,4 +1093,492 @@
     padding-left: 12px;
     padding-right: 12px;
   }
+}
+
+/* Lumen-inspired system layer, scoped to Behind the work only. */
+.immersive-about {
+  background: #030605;
+  color: #f4f7f1;
+}
+.immersive-about .about-index-grid {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+.about-index-grid i {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: #d8f0ff0d;
+  transform-origin: top;
+  animation: lumen-grid-v 1.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.about-index-grid i:nth-child(1) { left: 12.5%; animation-delay: 0.1s; }
+.about-index-grid i:nth-child(2) { left: 37.5%; animation-delay: 0.2s; }
+.about-index-grid i:nth-child(3) { left: 62.5%; animation-delay: 0.3s; }
+.about-index-grid i:nth-child(4) { left: 87.5%; animation-delay: 0.4s; }
+.about-index-grid b {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #d8f0ff0d;
+  transform-origin: left;
+  animation: lumen-grid-h 1.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.about-index-grid b:nth-child(5) { top: 34%; animation-delay: 0.5s; }
+.about-index-grid b:nth-child(6) { top: 71%; animation-delay: 0.65s; }
+.about-index-grid::after,
+.about-index-grid::before {
+  content: '';
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  border: 1px solid #afddff99;
+  border-color: #afddff99;
+  transform: translate(-50%, -50%);
+  animation: lumen-node-in 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.about-index-grid::before { left: 62.5%; top: 34%; animation-delay: 1s; }
+.about-index-grid::after { left: 37.5%; top: 71%; animation-delay: 1.15s; }
+.immersive-about > .about-index-grid,
+.immersive-about > .about-watermark {
+  position: absolute;
+  z-index: 0;
+}
+.immersive-about > *:not(.about-watermark):not(.about-index-grid) {
+  z-index: 1;
+}
+.immersive-about .about-watermark {
+  color: #afddff12;
+  text-shadow: 0 0 60px #afddff0c;
+}
+.immersive-about .immersive-section-top,
+.immersive-about .section-number,
+.immersive-about .about-kicker,
+.immersive-about .about-index,
+.immersive-about .about-system-note {
+  color: #afddffb8;
+}
+.immersive-about .immersive-section-top {
+  border-color: #afddff2e;
+}
+.immersive-about .about-editorial-head h2 {
+  max-width: 920px;
+  text-shadow: 0 0 45px #afddff14;
+}
+.immersive-about .about-asterisk {
+  color: #afddff;
+  text-shadow: 0 0 30px #afddff55;
+}
+.immersive-about .immersive-about-copy p + p {
+  color: #ffffff80;
+}
+.immersive-about .immersive-services {
+  position: relative;
+  border-color: #afddff45;
+}
+.immersive-about .immersive-services > div {
+  border-color: #afddff2e;
+}
+.immersive-about .immersive-services > div:hover {
+  color: #afddff;
+  background: #afddff0b;
+  border-color: #afddffa0;
+  box-shadow: inset 5px 0 #afddff;
+}
+.immersive-about .immersive-services > div > span:first-child,
+.immersive-about .immersive-services > div > span:last-child {
+  color: #afddffa8;
+}
+.about-system-note {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 48px;
+  padding-top: 14px;
+  border-top: 1px solid #afddff2e;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+}
+@keyframes lumen-grid-v { from { opacity: 0; transform: scaleY(0); } to { opacity: 1; transform: scaleY(1); } }
+@keyframes lumen-grid-h { from { opacity: 0; transform: scaleX(0); } to { opacity: 1; transform: scaleX(1); } }
+@keyframes lumen-node-in { from { opacity: 0; scale: 0.3; } to { opacity: 1; scale: 1; } }
+@media (max-width: 700px) {
+  .about-system-note {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+/* Bring the Behind the work interface and its motion accents into the hero palette. */
+.immersive-about {
+  background: #111925;
+  color: #eef1ee;
+}
+.immersive-about .about-index-grid i,
+.immersive-about .about-index-grid b {
+  background: #a9c0d01c;
+}
+.immersive-about .about-index-grid::before,
+.immersive-about .about-index-grid::after {
+  border-color: #dfff00a8;
+  box-shadow: 0 0 18px #dfff0055;
+}
+.immersive-about .about-watermark {
+  color: #b9c7d31a;
+  text-shadow: 0 0 60px #b9c7d314;
+}
+.immersive-about .immersive-section-top,
+.immersive-about .section-number,
+.immersive-about .about-kicker,
+.immersive-about .about-index,
+.immersive-about .about-system-note {
+  color: #b9c7d3c4;
+}
+.immersive-about .immersive-section-top,
+.immersive-about .about-system-note {
+  border-color: #a9b7c244;
+}
+.immersive-about .about-editorial-head h2 {
+  text-shadow: 0 0 45px #a9c0d018;
+}
+.immersive-about .about-asterisk {
+  color: #dfff00;
+  text-shadow: 0 0 30px #dfff0055;
+}
+.immersive-about .immersive-about-copy p + p {
+  color: #a8b2b7;
+}
+.immersive-about .immersive-services {
+  border-color: #a9b7c255;
+}
+.immersive-about .immersive-services > div {
+  border-color: #a9b7c244;
+}
+.immersive-about .immersive-services > div:hover {
+  color: #dfff00;
+  background: #dfff000d;
+  border-color: #dfff00a8;
+  box-shadow: inset 5px 0 #dfff00, 0 0 24px #dfff0014;
+}
+.immersive-about .immersive-services > div > span:first-child,
+.immersive-about .immersive-services > div > span:last-child {
+  color: #dfff00b8;
+}
+
+/* Final neutral accent pass: no fluorescent green in the public interface. */
+.immersive-home {
+  --accent: #c7b8a3;
+}
+.immersive-home ::selection {
+  background: #c7b8a3;
+  color: #111214;
+}
+.immersive-about .about-index-grid::before,
+.immersive-about .about-index-grid::after,
+.immersive-about .about-asterisk,
+.immersive-about .immersive-services > div > span:first-child,
+.immersive-about .immersive-services > div > span:last-child {
+  color: #c7b8a3;
+  border-color: #c7b8a388;
+}
+.immersive-about .immersive-services > div:hover {
+  color: #c7b8a3;
+  background: #c7b8a30d;
+  border-color: #c7b8a388;
+  box-shadow: inset 5px 0 #c7b8a3, 0 0 24px #c7b8a312;
+}
+.immersive-about .about-asterisk {
+  text-shadow: 0 0 30px #c7b8a344;
+}
+.immersive-about .immersive-section-top,
+.immersive-about .section-number,
+.immersive-about .about-kicker,
+.immersive-about .about-index,
+.immersive-about .about-system-note,
+.immersive-about .immersive-about-copy p + p,
+.immersive-about .immersive-services span,
+.immersive-about .immersive-services > div > span:first-child,
+.immersive-about .immersive-services > div > span:last-child {
+  color: #ffffff;
+}
+
+/* Center the method statement inside its two dividing lines. */
+.immersive-about .about-system-note {
+  min-height: 220px;
+  margin-top: 72px;
+  margin-bottom: 0;
+  padding: 28px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  border-top: 1px solid #ffffff35;
+  border-bottom: 1px solid #ffffff35;
+  text-align: center;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+}
+.immersive-about .about-system-note > span:last-child {
+  font-size: clamp(22px, 3.1vw, 48px);
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+}
+.immersive-about .about-asterisk {
+  color: #ffffff;
+  text-shadow:
+    0 0 18px #ffffff99,
+    0 0 48px #dce2e650;
+}
+.immersive-about:hover .about-asterisk {
+  color: #ffffff;
+}
+
+/* A quiet full-bleed physics field behind the editorial content. */
+.immersive-about > .about-geometry {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.78;
+  pointer-events: none;
+}
+.immersive-about > .about-geometry.about-geometry {
+  z-index: 0;
+}
+
+/* Words in Behind the work catch a soft, silver liquid-metal highlight. */
+.immersive-about .interactive-word {
+  display: inline-block;
+  color: inherit;
+  transition:
+    color 0.35s ease,
+    text-shadow 0.35s ease,
+    transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.immersive-about .interactive-word:hover,
+.immersive-about .interactive-word:focus-visible {
+  color: transparent;
+  background:
+    linear-gradient(
+      115deg,
+      #555d66 0%,
+      #ffffff 16%,
+      #b9c1c8 30%,
+      #ffffff 48%,
+      #3f4750 64%,
+      #ffffff 83%,
+      #8f99a2 100%
+    );
+  background-size: 220% 220%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-shadow:
+    0 0 56px #dce2e678,
+    0 0 16px #ffffff88;
+  transform: translateY(-3px);
+  animation: behind-word-metal 2.8s ease-in-out infinite alternate;
+}
+.immersive-about h2 .interactive-word:hover,
+.immersive-about h2 .interactive-word:focus-visible {
+  text-shadow:
+    0 0 56px #dce2e678,
+    0 0 16px #ffffff88;
+}
+@keyframes behind-word-metal {
+  from {
+    background-position: 0% 50%;
+  }
+  to {
+    background-position: 100% 50%;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .immersive-about .interactive-word {
+    transition: none;
+  }
+  .immersive-about .interactive-word:hover,
+  .immersive-about .interactive-word:focus-visible {
+    animation: none;
+    transform: none;
+    background-position: 50% 50%;
+  }
+}
+
+/* Service rows use a full-width progress-like metal sweep instead of word hover. */
+.immersive-about .immersive-services > div {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: #08090b;
+  color: #ffffff;
+  transition:
+    padding 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.45s ease;
+}
+.immersive-about .immersive-services > div::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  width: auto;
+  background:
+    linear-gradient(
+      110deg,
+      #20252a 0%,
+      #f7f9fa 18%,
+      #8e979f 34%,
+      #ffffff 49%,
+      #4e565f 66%,
+      #d9dfe3 82%,
+      #68717a 100%
+    );
+  background-size: 220% 100%;
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.immersive-about .immersive-services > div:hover,
+.immersive-about .immersive-services > div:focus-within {
+  padding-left: 0;
+  padding-right: 0;
+  color: #08090b;
+  border-color: #ffffff88;
+  box-shadow: none;
+}
+.immersive-about .immersive-services > div:hover::before,
+.immersive-about .immersive-services > div:focus-within::before {
+  clip-path: inset(0 0 0 0);
+  animation:
+    service-metal-reveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards,
+    service-metal-sweep 3.2s ease-in-out infinite alternate;
+}
+.immersive-about .immersive-services > div > span,
+.immersive-about .immersive-services > div > h3 {
+  position: relative;
+  z-index: 1;
+  color: inherit;
+}
+
+/* Keep the moving background visible through the service interaction layer. */
+.immersive-about .immersive-services > div {
+  background: transparent;
+  color: #ffffff;
+}
+.immersive-about .immersive-services > div::before {
+  opacity: 0.34;
+  mix-blend-mode: screen;
+}
+.immersive-about .immersive-services > div:hover,
+.immersive-about .immersive-services > div:focus-within {
+  color: #ffffff;
+  background: #ffffff08;
+}
+.immersive-about .immersive-services > div > span,
+.immersive-about .immersive-services > div > h3 {
+  color: #ffffff;
+  text-shadow: 0 1px 12px #00000099;
+}
+@keyframes service-metal-sweep {
+  from {
+    background-position: 0% 50%;
+  }
+  to {
+    background-position: 100% 50%;
+  }
+}
+@keyframes service-metal-reveal {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .immersive-about .immersive-services > div::before {
+    transition: clip-path 0.2s ease;
+  }
+  .immersive-about .immersive-services > div:hover::before,
+  .immersive-about .immersive-services > div:focus-within::before {
+    animation: none;
+    background-position: 50% 50%;
+  }
+}
+.hero-stage .availability i {
+  background: #c7b8a3;
+  box-shadow: 0 0 12px #c7b8a355;
+}
+
+/* Fluid metal lettering for the Selected Work point of view. */
+.immersive-works .immersive-section-title em {
+  display: inline-block;
+  color: transparent;
+  background:
+    linear-gradient(
+      115deg,
+      #7f858b 0%,
+      #f8fafb 13%,
+      #aeb5bc 25%,
+      #ffffff 39%,
+      #59616a 52%,
+      #dce2e6 67%,
+      #737b84 81%,
+      #ffffff 94%
+    );
+  background-size: 260% 260%;
+  background-position: 0% 50%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-shadow: 0 0 24px #dce2e61c;
+  animation: selected-work-metal 8s ease-in-out infinite alternate;
+}
+@keyframes selected-work-metal {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 40%;
+  }
+  100% {
+    background-position: 20% 60%;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .immersive-works .immersive-section-title em {
+    animation: none;
+    background-position: 50% 50%;
+  }
+}
+
+/* Shared public surface colors. */
+.immersive-home,
+.immersive-works,
+.immersive-about,
+.immersive-resume,
+.immersive-footer {
+  background: #08090b;
+  color: #eeeeeb;
+}
+.immersive-project-media,
+.resume-identity,
+.resume-photo > div {
+  background: #15171b;
+}
+.immersive-section-top,
+.immersive-footer-bottom,
+.immersive-project-description,
+.resume-description,
+.resume-introduction > p {
+  color: #a7a7a3;
+}
+.immersive-section-top,
+.immersive-footer-bottom,
+.immersive-services > div,
+.resume-logos {
+  border-color: #ffffff24;
 }
