@@ -1,12 +1,14 @@
 import 'server-only';
 import {getStore} from '@netlify/blobs';
-import {defaultContent,type Content,validateContent} from '@/lib/content';
+import contentSnapshot from '../content/site-content.json';
+import {type Content,validateContent} from '@/lib/content';
 import {netlifyMedia} from '@/lib/netlify-media';
 export function bindings(){return {MEDIA:netlifyMedia,PORTFOLIO_HOST:'netlify',CMS_ADMIN_USER_ID:undefined,CF_ACCESS_TEAM_DOMAIN:undefined,CF_ACCESS_AUD:undefined,CMS_ADMIN_EMAIL:process.env.CMS_ADMIN_EMAIL}}
 type Snapshot={content:Content;version:number;updatedAt:string|null};
+const sourceSnapshot=contentSnapshot as Snapshot;
 export async function readContent():Promise<Snapshot>{
  const value=await getStore({name:'portfolio-content',consistency:'strong'}).get('current',{type:'json'});
- const snapshot=value??{content:defaultContent,version:0,updatedAt:null};
+ const snapshot=value??sourceSnapshot;
  return {...snapshot,content:validateContent(snapshot.content)};
 }
 export async function writeContent(content:Content,version:number):Promise<Snapshot|null>{
