@@ -7,7 +7,7 @@
     "email": "Grandcanmakeit@outlook.com",
     "available": true,
     "aboutTitle": "About me",
-    "aboutBody": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. I work at the intersection of visual identities and digital experiences, turning a little curiosity into something unexpected.",
+    "aboutBody": "I am an aspiring UI/UX designer passionate about transforming complex requirements into intuitive, user-friendly, and visually engaging digital experiences through user research, visual design, and interaction design. I value thoughtful design logic and attention to detail, while believing that great design should balance functionality, creativity, and emotional connection.\n\n我是一名专注于 UI/UX Design 的应届设计师，热衷于通过用户研究、视觉表达与交互设计，将复杂需求转化为直观、易用且富有美感的数字体验。我注重设计逻辑与细节，关注用户感受，也相信优秀的设计应兼具功能性、创造力与情感价值。",
     "aboutExtra": "我的技能:\n\n交互设计: 用户界面设计(网站,应用等), Human-centered design (HCD)\n用户研究与分析：用户数据分析、用户访谈、问卷调查、可用性测试、A/B 测试、用户画像构建、需求洞察、定性/定量研究​\n数据处理与可视化：数据分析、数据可视化\n\n",
     "services": [
       "UI/UX Design",
@@ -29,6 +29,43 @@
       "intro": "农村孩子能吃苦, 左手力气大, 右手大力气.",
       "logoTitle": "LOGO STUDIES / 示例标识",
       "logoSpeed": 35,
+      "contacts": {
+        "wechat": {
+          "enabled": true,
+          "value": "Cabiget10Mrmbperyr"
+        },
+        "email": {
+          "enabled": true,
+          "value": "Grandcanmakeit@outlook.com"
+        },
+        "phone": {
+          "enabled": true,
+          "value": "+61433968908, +8613083859067"
+        }
+      },
+      "socials": [
+        {
+          "id": "social-instagram",
+          "platform": "instagram",
+          "label": "Instagram",
+          "url": "https://www.instagram.com/i_just_wanna_survive/",
+          "enabled": true
+        },
+        {
+          "id": "social-linkedin",
+          "platform": "linkedin",
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/in/jiahao-zhang-639562325/",
+          "enabled": true
+        },
+        {
+          "id": "social-steam",
+          "platform": "steam",
+          "label": "Steam",
+          "url": "https://steamcommunity.com/profiles/76561199151230914/",
+          "enabled": true
+        }
+      ],
       "entries": [
         {
           "id": "resume-1",
@@ -99,32 +136,22 @@
       "logos": [
         {
           "id": "logo-1",
-          "name": "FORMA",
+          "name": "Figma",
           "image": ""
         },
         {
           "id": "logo-2",
-          "name": "STILL",
+          "name": "Notion",
           "image": ""
         },
         {
           "id": "logo-3",
-          "name": "MONO",
+          "name": "VS Code",
           "image": ""
         },
         {
           "id": "logo-4",
-          "name": "FIELD",
-          "image": ""
-        },
-        {
-          "id": "logo-5",
-          "name": "ARC",
-          "image": ""
-        },
-        {
-          "id": "logo-6",
-          "name": "KIN",
+          "name": "Blender",
           "image": ""
         }
       ]
@@ -365,6 +392,6 @@
       }
     ]
   },
-  "version": 14,
-  "updatedAt": "2026-09-13T04:16:21.155Z"
+  "version": 17,
+  "updatedAt": "2026-09-13T06:07:25.273Z"
 }
